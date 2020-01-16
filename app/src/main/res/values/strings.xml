@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Sports ball</string>
+    <string name="man">Мужчины</string>
+    <string name="woman">Женщины</string>
+    <string name="title_activity_set_exercise">SetExerciseActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="age">Возраст</string>
+    <string name="strength">Сила:</string>
+    <string name="stamina">Выносливость:</string>
+    <string name="_3">3</string>
+    <string name="_5">5</string>
+    <string name="_4">4</string>
+    <string name="count_exp">Количество упраждений</string>
+    <string name="weight">Вес</string>
+    <string name="count">Количество</string>
+    <string name="m_sec">мСек</string>
+    <string name="sec">сек</string>
+    <string name="min">мин</string>
+    <string name="speed">Скорость</string>
+
+    <string-array name="spinner_categories">
+        <item>1 категория</item>
+        <item>2 категория</item>
+        <item>3 категория</item>
+    </string-array>
+</resources>

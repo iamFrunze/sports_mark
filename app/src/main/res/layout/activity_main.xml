@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/m_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewMan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/man_gradient"
+            android:text="@string/man"
+            android:textColor="#fff"
+            android:textSize="56sp"
+            android:padding="8dp"
+            android:layout_margin="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include" />
+
+        <TextView
+            android:id="@+id/textViewWoman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/woman"
+            android:textColor="#fff"
+            android:textSize="56sp"
+            android:padding="8dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/woman_gradient"
+            app:layout_anchorGravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMan" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
