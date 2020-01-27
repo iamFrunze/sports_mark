@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="name_war_skills">
+        <item>Упражнение N 48 марш-бросок на 5 км</item>
+        <item>Упражнение N 52 метание гранаты 600 г на дальность</item>
+        <item>Упражнение N 60 ныряние в длину</item>
+    </string-array>
+
+    <string-array name="num48">
+        <item>21.00</item>
+        <item>21.06</item>
+        <item>21.12</item>
+        <item>21.18</item>
+        <item>21.24</item>
+        <item>21.30</item>
+        <item>21.36</item>
+        <item>21.42</item>
+        <item>21.48</item>
+        <item>21.54</item>
+        <item>22.00</item>
+        <item>22.06</item>
+        <item>22.12</item>
+        <item>22.18</item>
+        <item>22.24</item>
+        <item>22.30</item>
+        <item>22.36</item>
+        <item>22.42</item>
+        <item>22.48</item>
+        <item>22.50</item>
+        <item>22.54</item>
+        <item>22.55</item>
+        <item>23.00</item>
+        <item>23.05</item>
+        <item>23.10</item>
+        <item>23.15</item>
+        <item>23.20</item>
+        <item>23.25</item>
+        <item>23.30</item>
+        <item>23.35</item>
+        <item>23.40</item>
+        <item>23.45</item>
+        <item>23.50</item>
+        <item>23.55</item>
+        <item>24.00</item>
+        <item>24.06</item>
+        <item>24.12</item>
+        <item>24.18</item>
+        <item>24.24</item>
+        <item>24.30</item>
+        <item>24.35</item>
+        <item>24.40</item>
+        <item>24.45</item>
+        <item>24.50</item>
+        <item>25.00</item>
+        <item>25.05</item>
+        <item>25.10</item>
+        <item>25.15</item>
+        <item>25.20</item>
+        <item>25.25</item>
+        <item>25.30</item>
+        <item>25.35</item>
+        <item>25.40</item>
+        <item>25.45</item>
+        <item>25.50</item>
+        <item>25.55</item>
+        <item>26.00</item>
+        <item>26.05</item>
+        <item>26.10</item>
+        <item>26.15</item>
+        <item>26.20</item>
+        <item>26.25</item>
+        <item>26.30</item>
+        <item>26.35</item>
+        <item>27.40</item>
+        <item>27.45</item>
+        <item>27.50</item>
+        <item>28.00</item>
+        <item>28.05</item>
+        <item>28.10</item>
+        <item>28.15</item>
+        <item>28.20</item>
+        <item>28.25</item>
+        <item>28.30</item>
+        <item>28.35</item>
+        <item>28.40</item>
+        <item>28.45</item>
+        <item>28.50</item>
+        <item>28.55</item>
+        <item>29.00</item>
+        <item>29.05</item>
+        <item>29.10</item>
+        <item>29.15</item>
+        <item>29.20</item>
+        <item>29.25</item>
+        <item>29.30</item>
+        <item>29.35</item>
+        <item>29.40</item>
+        <item>29.45</item>
+        <item>29.50</item>
+        <item>29.55</item>
+        <item>30.00</item>
+        <item>30.05</item>
+        <item>30.10</item>
+        <item>30.15</item>
+
+    </string-array>
+    <string-array name="num52">
+        <item> 55</item>
+        <item> 54</item>
+        <item> 53 </item>
+        <item> 53</item>
+        <item> 52 </item>
+        <item> 52</item>
+        <item> 51 </item>
+        <item> 51</item>
+        <item> 50 </item>
+        <item> 50</item>
+        <item> 49 </item>
+        <item> 49</item>
+        <item> 48 </item>
+        <item> 48</item>
+        <item> 47 </item>
+        <item> 47</item>
+        <item> 46 </item>
+        <item> 46</item>
+        <item> 45 </item>
+        <item> 45</item>
+        <item> 44 </item>
+        <item> 44</item>
+        <item> 43 </item>
+        <item> 43</item>
+        <item> 42 </item>
+        <item> 42</item>
+        <item> 41 </item>
+        <item> 41</item>
+        <item> 40 </item>
+        <item> 40</item>
+        <item> 38</item>
+        <item> 38</item>
+        <item> 38</item>
+        <item> 37 </item>
+        <item> 37 </item>
+        <item> 37</item>
+        <item> 36 </item>
+        <item> 36 </item>
+        <item> 36</item>
+        <item> 35 </item>
+        <item> 35 </item>
+        <item> 35</item>
+        <item> 34 </item>
+        <item> 34 </item>
+        <item> 34</item>
+        <item> 33 </item>
+        <item> 33 </item>
+        <item> 33</item>
+        <item> 32 </item>
+        <item> 32 </item>
+        <item> 32</item>
+        <item> 31 </item>
+        <item> 31 </item>
+        <item> 31 </item>
+        <item> 31</item>
+        <item> 30 </item>
+        <item> 30 </item>
+        <item> 30 </item>
+        <item> 30</item>
+        <item> 29 </item>
+        <item> 29 </item>
+        <item> 29 </item>
+        <item> 29 </item>
+        <item> 29</item>
+        <item> 28 </item>
+        <item> 28 </item>
+        <item> 28 </item>
+        <item> 28 </item>
+        <item> 28</item>
+        <item> 27</item>
+        <item> 27</item>
+        <item> 27</item>
+        <item> 27</item>
+        <item> 27</item>
+        <item> 27</item>
+        <item> 26 </item>
+        <item> 26 </item>
+        <item> 26 </item>
+        <item> 26 </item>
+        <item> 26 </item>
+        <item> 26 </item>
+        <item> 26</item>
+        <item> 25 </item>
+        <item> 25 </item>
+        <item> 25 </item>
+        <item> 25 </item>
+        <item> 25 </item>
+        <item> 25 </item>
+        <item> 25 </item>
+        <item> 25</item>
+        <item> 24 </item>
+        <item> 24 </item>
+        <item> 24 </item>
+        <item> 24 </item>
+        <item> 24</item>
+
+    </string-array>
+    <string-array name="num60">
+        <item>50</item>
+        <item>49.5</item>
+        <item>49</item>
+        <item>48.5</item>
+        <item>48</item>
+        <item>47.5</item>
+        <item>47</item>
+        <item>46.5</item>
+        <item>46</item>
+        <item>45.5</item>
+        <item>45</item>
+        <item>44.5</item>
+        <item>44</item>
+        <item>43.5</item>
+        <item>43</item>
+        <item>42.5</item>
+        <item>42</item>
+        <item>41.5</item>
+        <item>41</item>
+        <item>40.5</item>
+        <item>40</item>
+        <item>39.5</item>
+        <item>39</item>
+        <item>38.5</item>
+        <item>38</item>
+        <item>37.5</item>
+        <item>37</item>
+        <item>36.5</item>
+        <item>36</item>
+        <item>35.5</item>
+        <item>35</item>
+        <item>34.5</item>
+        <item>34</item>
+        <item>33.5</item>
+        <item>33</item>
+        <item>32.5</item>
+        <item>32</item>
+        <item>31.5</item>
+        <item>31</item>
+        <item>30.5</item>
+        <item>30</item>
+        <item>29.5</item>
+        <item>29</item>
+        <item>28.5</item>
+        <item>28</item>
+        <item>27.5</item>
+        <item>27</item>
+        <item>26.5</item>
+        <item>26</item>
+        <item>25.5</item>
+        <item>25</item>
+        <item>24.5</item>
+        <item>24</item>
+        <item>23.5</item>
+        <item>23</item>
+        <item>22.5</item>
+        <item>22</item>
+        <item>21.5</item>
+        <item>21</item>
+        <item>20.5</item>
+        <item>20</item>
+        <item>19.5</item>
+        <item>19</item>
+        <item>18.5</item>
+        <item>18</item>
+        <item>17.5</item>
+        <item>17</item>
+        <item>16.5</item>
+        <item>16</item>
+        <item>15.5</item>
+        <item>15</item>
+        <item>14.5</item>
+        <item>14</item>
+        <item>13.5</item>
+        <item>13</item>
+        <item>12.5</item>
+        <item>12</item>
+        <item>11.5</item>
+        <item>11</item>
+        <item>10.5</item>
+        <item>10</item>
+        <item>9.5</item>
+        <item>9</item>
+        <item>8.5</item>
+        <item>8</item>
+        <item>7.5</item>
+        <item>7</item>
+        <item>6.5</item>
+        <item>6</item>
+        <item>5.5</item>
+        <item>5</item>
+        <item>4.5</item>
+        <item>4</item>
+        <item>3.5</item>
+        <item>3</item>
+
+    </string-array>
+    
+</resources>

@@ -6,105 +6,118 @@
         <item> Упражнение N 40 бег на 60 м	            </item>
         <item> Упражнение N 41 бег на 100 м             </item>
         <item> Упражнение N 42 Челночный бег 10 х 10 м  </item>
-        <item> Упражнение N 43 бег на 400 м             </item>
+        <item>Упражнение N 51 тройной прыжок с места </item>
+        <item>Упражнение N 57 плавание на 100 м вольным стилем</item>
+        <item>Упражнение N 57а плавание на 50 м вольным стилем</item>
+        <item>Упражнение N 58 плавание на 100 м способом брасс</item>
 
     </string-array>
+
+    <string-array name="name_speed_women">
+        <item>Упражнение N 40 бег 60 м </item>
+        <item>Упражнение N 41 бег 100 м</item>
+        <item> Упражнение N 42 Челночный бег 10 х 10 м  </item>
+        <item>Упражнение N 57 плавание на 100 м вольным стилем </item>
+        <item>Упражнение N 57а плавание на 50 м</item>
+        <item>Упражнение N 58 плавание на 100 м способом брасс </item>
+    </string-array>
+
     <string-array name="num40">
-       <item>7.3 </item>
-       <item>7.4 </item>
-       <item>7.4 </item>
-       <item>7.5 </item>
-       <item>7.5 </item>
-       <item>7.6 </item>
-       <item>7.6 </item>
-       <item>7.6 </item>
-       <item>7.7 </item>
-       <item>7.7 </item>
-       <item>7.7 </item>
-       <item>7.8 </item>
-       <item>7.8 </item>
-       <item>7.8 </item>
-       <item>7.8 </item>
-       <item>7.9 </item>
-       <item>7.9 </item>
-       <item>7.9 </item>
-       <item>7.9 </item>
-       <item>7.9 </item>
-       <item>7.9 </item>
-       <item>7.9 </item>
-       <item>7.9 </item>
-       <item>7.9 </item>
-       <item>8.0 </item>
-       <item>8.0 </item>
-       <item>8.0 </item>
-       <item>8.0 </item>
-       <item>8.0 </item>
-       <item>8.1 </item>
-       <item>8.1 </item>
-       <item>8.1 </item>
-       <item>8.1 </item>
-       <item>8.1 </item>
-       <item>8.1 </item>
-       <item>8.2 </item>
-       <item>8.2 </item>
-       <item>8.2 </item>
-       <item>8.2 </item>
-       <item>8.2 </item>
-       <item>8.2 </item>
-       <item>8.3 </item>
-       <item>8.3 </item>
-       <item>8.3 </item>
-       <item>8.3 </item>
-       <item>8.3 </item>
-       <item>8.3 </item>
-       <item>8.4 </item>
-       <item>8.4 </item>
-       <item>8.4 </item>
-       <item>8.4 </item>
-       <item>8.4 </item>
-       <item>8.4 </item>
-       <item>8.5 </item>
-       <item>8.5 </item>
-       <item>8.5 </item>
-       <item>8.5 </item>
-       <item>8.6 </item>
-       <item>8.6 </item>
-       <item>8.6 </item>
-       <item>8.6 </item>
-       <item>8.7 </item>
-       <item>8.7 </item>
-       <item>8.7 </item>
-       <item>8.7 </item>
-       <item>8.8 </item>
-       <item>8.8 </item>
-       <item>8.8 </item>
-       <item>8.8 </item>
-       <item>8.9 </item>
-       <item>8.9 </item>
-       <item>9.0 </item>
-       <item>9.0 </item>
-       <item>9.1 </item>
-       <item>9.1 </item>
-       <item>9.2 </item>
-       <item>9.3 </item>
-       <item>9.4 </item>
-       <item>9.5 </item>
-       <item>9.6 </item>
-       <item>9.7 </item>
-       <item>9.8 </item>
-       <item>9.8 </item>
-       <item>9.9 </item>
-       <item>9.9 </item>
-       <item>10.0</item>
-       <item>10.1</item>
-       <item>10.2</item>
-       <item>10.3</item>
-       <item>10.4</item>
-       <item>10.5</item>
-       <item>10.6</item>
-       <item>10.7</item>
-       <item>10.8</item>
-       <item>11.0</item>
+        <item>7.3 </item>
+        <item>7.4 </item>
+        <item>7.4 </item>
+        <item>7.5 </item>
+        <item>7.5 </item>
+        <item>7.6 </item>
+        <item>7.6 </item>
+        <item>7.6 </item>
+        <item>7.7 </item>
+        <item>7.7 </item>
+        <item>7.7 </item>
+        <item>7.8 </item>
+        <item>7.8 </item>
+        <item>7.8 </item>
+        <item>7.8 </item>
+        <item>7.9 </item>
+        <item>7.9 </item>
+        <item>7.9 </item>
+        <item>7.9 </item>
+        <item>7.9 </item>
+        <item>7.9 </item>
+        <item>7.9 </item>
+        <item>7.9 </item>
+        <item>7.9 </item>
+        <item>8.0 </item>
+        <item>8.0 </item>
+        <item>8.0 </item>
+        <item>8.0 </item>
+        <item>8.0 </item>
+        <item>8.1 </item>
+        <item>8.1 </item>
+        <item>8.1 </item>
+        <item>8.1 </item>
+        <item>8.1 </item>
+        <item>8.1 </item>
+        <item>8.2 </item>
+        <item>8.2 </item>
+        <item>8.2 </item>
+        <item>8.2 </item>
+        <item>8.2 </item>
+        <item>8.2 </item>
+        <item>8.3 </item>
+        <item>8.3 </item>
+        <item>8.3 </item>
+        <item>8.3 </item>
+        <item>8.3 </item>
+        <item>8.3 </item>
+        <item>8.4 </item>
+        <item>8.4 </item>
+        <item>8.4 </item>
+        <item>8.4 </item>
+        <item>8.4 </item>
+        <item>8.4 </item>
+        <item>8.5 </item>
+        <item>8.5 </item>
+        <item>8.5 </item>
+        <item>8.5 </item>
+        <item>8.6 </item>
+        <item>8.6 </item>
+        <item>8.6 </item>
+        <item>8.6 </item>
+        <item>8.7 </item>
+        <item>8.7 </item>
+        <item>8.7 </item>
+        <item>8.7 </item>
+        <item>8.8 </item>
+        <item>8.8 </item>
+        <item>8.8 </item>
+        <item>8.8 </item>
+        <item>8.9 </item>
+        <item>8.9 </item>
+        <item>9.0 </item>
+        <item>9.0 </item>
+        <item>9.1 </item>
+        <item>9.1 </item>
+        <item>9.2 </item>
+        <item>9.3 </item>
+        <item>9.4 </item>
+        <item>9.5 </item>
+        <item>9.6 </item>
+        <item>9.7 </item>
+        <item>9.8 </item>
+        <item>9.8 </item>
+        <item>9.9 </item>
+        <item>9.9 </item>
+        <item>10.0</item>
+        <item>10.1</item>
+        <item>10.2</item>
+        <item>10.3</item>
+        <item>10.4</item>
+        <item>10.5</item>
+        <item>10.6</item>
+        <item>10.7</item>
+        <item>10.8</item>
+        <item>11.0</item>
 
     </string-array>
     <string-array name="num41">
@@ -303,103 +316,1342 @@
         <item>34.4</item>
 
     </string-array>
-    <string-array name="num43">
-        <item>56.6.0</item>
-        <item>56.7.0</item>
-        <item>56.8.0</item>
-        <item>57.0.0</item>
-        <item>57.3.0</item>
-        <item>57.6.0</item>
-        <item>58.0.0</item>
-        <item>58.3.0</item>
-        <item>58.5.0</item>
-        <item>58.7.0</item>
-        <item>59.0.0</item>
-        <item>59.3.0</item>
-        <item>59.5.0</item>
-        <item>59.7.0</item>
-        <item>1.00.0</item>
-        <item>1.00.2</item>
-        <item>1.00.4</item>
-        <item>1.00.5</item>
-        <item>1.00.7</item>
-        <item>1.00.9</item>
-        <item>1.01.0</item>
-        <item>1.01.2</item>
-        <item>1.01.4</item>
-        <item>1.01.5</item>
-        <item>1.01.6</item>
-        <item>1.01.7</item>
-        <item>1.01.9</item>
-        <item>1.02.0</item>
-        <item>1.02.2</item>
-        <item>1.02.3</item>
-        <item>1.02.4</item>
-        <item>1.02.5</item>
-        <item>1.02.7</item>
-        <item>1.02.9</item>
-        <item>1.03.0</item>
-        <item>1.03.2</item>
-        <item>1.03.4</item>
-        <item>1.03.6</item>
-        <item>1.03.8</item>
-        <item>1.04.0</item>
-        <item>1.04.2</item>
-        <item>1.04.4</item>
-        <item>1.04.6</item>
-        <item>1.04.8</item>
-        <item>1.05.0</item>
-        <item>1.05.3</item>
-        <item>1.05.5</item>
-        <item>1.05.7</item>
-        <item>1.06.0</item>
-        <item>1.06.3</item>
-        <item>1.06.5</item>
-        <item>1.06.8</item>
-        <item>1,07.0</item>
-        <item>1.07.4</item>
-        <item>1.07.7</item>
-        <item>1.08.0</item>
-        <item>1.08.3</item>
-        <item>1.08.6</item>
-        <item>1.09.0</item>
-        <item>1.09.5</item>
-        <item>1.10.0</item>
-        <item>1.10.5</item>
-        <item>1.11.0</item>
-        <item>1.11.5</item>
-        <item>1.12.0</item>
-        <item>1.12.5</item>
-        <item>1.13.0</item>
-        <item>1.13.5</item>
-        <item>1.14.0</item>
-        <item>1.14.5</item>
-        <item>1,15.0</item>
-        <item>1.15.5</item>
-        <item>1.16.0</item>
-        <item>1.16.5</item>
-        <item>1.17.0</item>
-        <item>1.18.0</item>
-        <item>1.19.0</item>
-        <item>1.20.0</item>
-        <item>1.21.0</item>
-        <item>1.23.0</item>
-        <item>1.25.0</item>
-        <item>1.25.5</item>
-        <item>1.26.0</item>
-        <item>1.26.5</item>
-        <item>1.27.0</item>
-        <item>1.28.0</item>
-        <item>1.28.5</item>
-        <item>1.29.0</item>
-        <item>1.30.0</item>
-        <item>1.31.0</item>
-        <item>1.32.0</item>
-        <item>1.34.0</item>
-        <item>1.36.0</item>
-        <item>1.39.0</item>
-        <item>1.42.0</item>
+    <string-array name="num51">
+        <item>850</item>
+        <item>844</item>
+        <item>837</item>
+        <item>830</item>
+        <item>827</item>
+        <item>823</item>
+        <item>820</item>
+        <item>815</item>
+        <item>810</item>
+        <item>805</item>
+        <item>800</item>
+        <item>795</item>
+        <item>790</item>
+        <item>785</item>
+        <item>780</item>
+        <item>775</item>
+        <item>770</item>
+        <item>765</item>
+        <item>760</item>
+        <item>755</item>
+        <item>750</item>
+        <item>745</item>
+        <item>740</item>
+        <item>735</item>
+        <item>730</item>
+        <item>724</item>
+        <item>718</item>
+        <item>715</item>
+        <item>709</item>
+        <item>703</item>
+        <item>700</item>
+        <item>694</item>
+        <item>688</item>
+        <item>682</item>
+        <item>676</item>
+        <item>670</item>
+        <item>664</item>
+        <item>658</item>
+        <item>653</item>
+        <item>646</item>
+        <item>640</item>
+        <item>637</item>
+        <item>634</item>
+        <item>631</item>
+        <item>628</item>
+        <item>625</item>
+        <item>622</item>
+        <item>619</item>
+        <item>616</item>
+        <item>613</item>
+        <item>610</item>
+        <item>607</item>
+        <item>604</item>
+        <item>601</item>
+        <item>598</item>
+        <item>595</item>
+        <item>591</item>
+        <item>589</item>
+        <item>586</item>
+        <item>583</item>
+        <item>580</item>
+        <item>576</item>
+        <item>572</item>
+        <item>568</item>
+        <item>564</item>
+        <item>560</item>
+        <item>556</item>
+        <item>552</item>
+        <item>548</item>
+        <item>544</item>
+        <item>540</item>
+        <item>536</item>
+        <item>533</item>
+        <item>530</item>
+        <item>526</item>
+        <item>523</item>
+        <item>520</item>
+        <item>514</item>
+        <item>507</item>
+        <item>505</item>
+        <item>500</item>
+        <item>495</item>
+        <item>490</item>
+        <item>485</item>
+        <item>480</item>
+        <item>475</item>
+        <item>470</item>
+        <item>465</item>
+        <item>460</item>
+        <item>458</item>
+        <item>453</item>
+        <item>451</item>
+        <item>448</item>
+        <item>445</item>
+        <item>442</item>
+
+    </string-array>
+    <string-array name="num57">
+        <item>1.00</item>
+        <item>1.01</item>
+        <item>1.02</item>
+        <item>1.03</item>
+        <item>1.04</item>
+        <item>1.05</item>
+        <item>1.06</item>
+        <item>1.07</item>
+        <item>1.08</item>
+        <item>1.09</item>
+        <item>1.10</item>
+        <item>1.11</item>
+        <item>1.12</item>
+        <item>1.13</item>
+        <item>1.14</item>
+        <item>1.15</item>
+        <item>1.16</item>
+        <item>1.17</item>
+        <item>1.18</item>
+        <item>1.19</item>
+        <item>1.20</item>
+        <item>1.21</item>
+        <item>1.22</item>
+        <item>1.23</item>
+        <item>1.24</item>
+        <item>1.25</item>
+        <item>1.26</item>
+        <item>1.27</item>
+        <item>1.28</item>
+        <item>1.29</item>
+        <item>1.30</item>
+        <item>1.31</item>
+        <item>1.32</item>
+        <item>1.33</item>
+        <item>1.34</item>
+        <item>1.35</item>
+        <item>1.36</item>
+        <item>1.37</item>
+        <item>1.38</item>
+        <item>1.39</item>
+        <item>1.40</item>
+        <item>1.41</item>
+        <item>1.42</item>
+        <item>1.43</item>
+        <item>1.44</item>
+        <item>1.45</item>
+        <item>1.46</item>
+        <item>1.47</item>
+        <item>1.48</item>
+        <item>1.49</item>
+        <item>1.50</item>
+        <item>1.51</item>
+        <item>1.52</item>
+        <item>1.53</item>
+        <item>1.54</item>
+        <item>1.55</item>
+        <item>1.56</item>
+        <item>1.57</item>
+        <item>1.58</item>
+        <item>1.59</item>
+        <item>2.00</item>
+        <item>2.01</item>
+        <item>2.02</item>
+        <item>2.03</item>
+        <item>2.04</item>
+        <item>2.06</item>
+        <item>2.08</item>
+        <item>2.10</item>
+        <item>2.12</item>
+        <item>2.14</item>
+        <item>2.16</item>
+        <item>2.18</item>
+        <item>2.20</item>
+        <item>2.22</item>
+        <item>2.24</item>
+        <item>2.26</item>
+        <item>2.28</item>
+        <item>2.30</item>
+        <item>2.32</item>
+        <item>2.34</item>
+        <item>2.36</item>
+        <item>2.38</item>
+        <item>2.40</item>
+        <item>2.42</item>
+        <item>2.44</item>
+        <item>2.46</item>
+        <item>2.48</item>
+        <item>2.50</item>
+        <item>2.52</item>
+        <item>2.54</item>
+        <item>2.56</item>
+        <item>2.58</item>
+        <item>3.00</item>
+        <item>3.02</item>
+        <item>3.04</item>
+    </string-array>
+    <string-array name="num57a">
+        <item>30.0</item>
+        <item>30.3</item>
+        <item>30.6</item>
+        <item>30.9</item>
+        <item>31.2</item>
+        <item>31.5</item>
+        <item>31.8</item>
+        <item>32.1</item>
+        <item>32.4</item>
+        <item>32.7</item>
+        <item>33.0</item>
+        <item>33.3</item>
+        <item>33.6</item>
+        <item>33.9</item>
+        <item>34.2</item>
+        <item>34.5</item>
+        <item>34.8</item>
+        <item>35.1</item>
+        <item>35.4</item>
+        <item>35.7</item>
+        <item>36.0</item>
+        <item>36.3</item>
+        <item>36.6</item>
+        <item>36.9</item>
+        <item>37.2</item>
+        <item>37.5</item>
+        <item>37.8</item>
+        <item>38.1</item>
+        <item>38.4</item>
+        <item>38.7</item>
+        <item>39.0</item>
+        <item>39.3</item>
+        <item>39.6</item>
+        <item>39.9</item>
+        <item>40.2</item>
+        <item>40.5</item>
+        <item>40.8</item>
+        <item>41.1</item>
+        <item>41.4</item>
+        <item>41.7</item>
+        <item>42.0</item>
+        <item>42.3</item>
+        <item>42.6</item>
+        <item>42.9</item>
+        <item>43.2</item>
+        <item>43.5</item>
+        <item>43.8</item>
+        <item>44.1</item>
+        <item>44.4</item>
+        <item>44.7</item>
+        <item>45.0</item>
+        <item>45.3</item>
+        <item>45.6</item>
+        <item>45.9</item>
+        <item>46.2</item>
+        <item>46.5</item>
+        <item>46.8</item>
+        <item>47.1</item>
+        <item>47.4</item>
+        <item>47.7</item>
+        <item>48.0</item>
+        <item>48.3</item>
+        <item>48.6</item>
+        <item>48.9</item>
+        <item>49.2</item>
+        <item>49.5</item>
+        <item>49.8</item>
+        <item>50.1</item>
+        <item>50.4</item>
+        <item>50.7</item>
+        <item>51.0</item>
+        <item>51.3</item>
+        <item>51.6</item>
+        <item>51.9</item>
+        <item>52.2</item>
+        <item>52.5</item>
+        <item>52.8</item>
+        <item>53.1</item>
+        <item>53.4</item>
+        <item>53.7</item>
+        <item>54.0</item>
+        <item>54.3</item>
+        <item>54.6</item>
+        <item>54.9</item>
+        <item>55.2</item>
+        <item>55.5</item>
+        <item>55.8</item>
+        <item>56.1</item>
+        <item>56.4</item>
+        <item>56.7</item>
+        <item>57.0</item>
+        <item>57.3</item>
+        <item>57.6</item>
+        <item>57.9</item>
+        <item>58.2</item>
+
+    </string-array>
+    <string-array name="num58">
+        <item>1.16</item>
+        <item>1.17</item>
+        <item>1.18</item>
+        <item>1.19</item>
+        <item>1.20</item>
+        <item>1.21</item>
+        <item>1.22</item>
+        <item>1.23</item>
+        <item>1.24</item>
+        <item>1.25</item>
+        <item>1.26</item>
+        <item>1.27</item>
+        <item>1.28</item>
+        <item>1.29</item>
+        <item>1.30</item>
+        <item>1.31</item>
+        <item>1.32</item>
+        <item>1.33</item>
+        <item>1.34</item>
+        <item>1.35</item>
+        <item>1.36</item>
+        <item>1.37</item>
+        <item>1.38</item>
+        <item>1.39</item>
+        <item>1.40</item>
+        <item>1.41</item>
+        <item>1.42</item>
+        <item>1.43</item>
+        <item>1.44</item>
+        <item>1.45</item>
+        <item>1.46</item>
+        <item>1.47</item>
+        <item>1.48</item>
+        <item>1.49</item>
+        <item>1.50</item>
+        <item>1.51</item>
+        <item>1.52</item>
+        <item>1.53</item>
+        <item>1.54</item>
+        <item>1.55</item>
+        <item>1.56</item>
+        <item>1.57</item>
+        <item>1.58</item>
+        <item>1.59</item>
+        <item>2.00</item>
+        <item>2.01</item>
+        <item>2.02</item>
+        <item>2.03</item>
+        <item>2.04</item>
+        <item>2.05</item>
+        <item>2.06</item>
+        <item>2.07</item>
+        <item>2.08</item>
+        <item>2.09</item>
+        <item>2.10</item>
+        <item>2.11</item>
+        <item>2.12</item>
+        <item>2.13</item>
+        <item>2.14</item>
+        <item>2.15</item>
+        <item>2.16</item>
+        <item>2.17</item>
+        <item>2.18</item>
+        <item>2.19</item>
+        <item>2.20</item>
+        <item>2.22</item>
+        <item>2.24</item>
+        <item>2.26</item>
+        <item>2.28</item>
+        <item>2.30</item>
+        <item>2.32</item>
+        <item>2.34</item>
+        <item>2.36</item>
+        <item>2.38</item>
+        <item>2.40</item>
+        <item>2.42</item>
+        <item>2.44</item>
+        <item>2.46</item>
+        <item>2.48</item>
+        <item>2.50</item>
+        <item>2.52</item>
+        <item>2.54</item>
+        <item>2.56</item>
+        <item>2.58</item>
+        <item>3.00</item>
+        <item>3.02</item>
+        <item>3.04</item>
+        <item>3.06</item>
+        <item>3.08</item>
+        <item>3.10</item>
+        <item>3.12</item>
+        <item>3.14</item>
+        <item>3.16</item>
+        <item>3.18</item>
+        <item>3.20</item>
 
     </string-array>
 
+    <string-array name="num40W_1">
+        <item>8.8</item>
+        <item>8.9</item>
+        <item>8.9</item>
+        <item>8.9</item>
+        <item>9.0</item>
+        <item>9.0</item>
+        <item>9.0</item>
+        <item>9.0</item>
+        <item>9.1</item>
+        <item>9.1</item>
+        <item>9.1</item>
+        <item>9.1</item>
+        <item>9.1</item>
+        <item>9.2</item>
+        <item>9.2</item>
+        <item>9.2</item>
+        <item>9.2</item>
+        <item>9.2</item>
+        <item>9.3</item>
+        <item>9.3</item>
+        <item>9.3</item>
+        <item>9.3</item>
+        <item>9.3</item>
+        <item>9.4</item>
+        <item>9.4</item>
+        <item>9.4</item>
+        <item>9.4</item>
+        <item>9.4</item>
+        <item>9.4</item>
+        <item>9.5</item>
+        <item>9.5</item>
+        <item>9.5</item>
+        <item>9.5</item>
+        <item>9.5</item>
+        <item>9.5</item>
+        <item>9.6</item>
+        <item>9.6</item>
+        <item>9.6</item>
+        <item>9.6</item>
+        <item>9.6</item>
+        <item>9.6</item>
+        <item>9.7</item>
+        <item>9.7</item>
+        <item>9.7</item>
+        <item>9.8</item>
+        <item>9.8</item>
+        <item>9.9</item>
+        <item>9.9</item>
+        <item>10.0</item>
+        <item>10.0</item>
+        <item>10.1</item>
+        <item>10.1</item>
+        <item>10.2</item>
+        <item>10.2</item>
+        <item>10.3</item>
+        <item>10.3</item>
+        <item>10.4</item>
+        <item>10.4</item>
+        <item>10.5</item>
+        <item>10.5</item>
+        <item>10.6</item>
+        <item>10.6</item>
+        <item>10.7</item>
+        <item>10.7</item>
+        <item>10.8</item>
+        <item>10.8</item>
+        <item>10.9</item>
+        <item>11.0</item>
+        <item>11.0</item>
+        <item>11.1</item>
+        <item>11.2</item>
+        <item>11.2</item>
+        <item>11.3</item>
+        <item>11.4</item>
+        <item>11.4</item>
+        <item>11.5</item>
+        <item>11.5</item>
+        <item>11.6</item>
+        <item>11.7</item>
+        <item>11.8</item>
+        <item>11.8</item>
+        <item>11.9</item>
+        <item>12.0</item>
+
+    </string-array>
+    <string-array name="num40W_2">
+        <item>9.5</item>
+        <item>9.6</item>
+        <item>9.6</item>
+        <item>9.6</item>
+        <item>9.7</item>
+        <item>9.7</item>
+        <item>9.7</item>
+        <item>9.7</item>
+        <item>9.8</item>
+        <item>9.8</item>
+        <item>9.8</item>
+        <item>9.8</item>
+        <item>9.9</item>
+        <item>9.9</item>
+        <item>9.9</item>
+        <item>9.9</item>
+        <item>10.0</item>
+        <item>10.0</item>
+        <item>10.0</item>
+        <item>10.0</item>
+        <item>10.1</item>
+        <item>10.1</item>
+        <item>10.1</item>
+        <item>10.1</item>
+        <item>10.1</item>
+        <item>10.2</item>
+        <item>10.2</item>
+        <item>10.2</item>
+        <item>10.2</item>
+        <item>10.2</item>
+        <item>10.3</item>
+        <item>10.3</item>
+        <item>10.3</item>
+        <item>10.3</item>
+        <item>10.3</item>
+        <item>10.4</item>
+        <item>10.4</item>
+        <item>10.4</item>
+        <item>10.4</item>
+        <item>10.4</item>
+        <item>10.4</item>
+        <item>10.5</item>
+        <item>10.5</item>
+        <item>10.5</item>
+        <item>10.6</item>
+        <item>10.6</item>
+        <item>10.6</item>
+        <item>10.6</item>
+        <item>10.6</item>
+        <item>10.6</item>
+        <item>10.7</item>
+        <item>10.7</item>
+        <item>10.8</item>
+        <item>10.8</item>
+        <item>10.9</item>
+        <item>10.9</item>
+        <item>11.0</item>
+        <item>11.0</item>
+        <item>11.1</item>
+        <item>11.1</item>
+        <item>11.2</item>
+        <item>11.2</item>
+        <item>11.3</item>
+        <item>11.3</item>
+        <item>11.4</item>
+        <item>11.4</item>
+        <item>11.5</item>
+        <item>11.5</item>
+        <item>11.6</item>
+        <item>11.6</item>
+        <item>11.7</item>
+        <item>11.7</item>
+        <item>11.8</item>
+        <item>11.9</item>
+        <item>11.9</item>
+        <item>12.0</item>
+        <item>12.0</item>
+        <item>12.1</item>
+        <item>12.2</item>
+        <item>12.3</item>
+        <item>12.3</item>
+        <item>12.4</item>
+        <item>12.5</item>
+
+    </string-array>
+    <string-array name="num41W_1">
+        <item>14.8</item>
+        <item>14.9</item>
+        <item>15.0</item>
+        <item>15.0</item>
+        <item>15.1</item>
+        <item>15.1</item>
+        <item>15.2</item>
+        <item>15.2</item>
+        <item>15.3</item>
+        <item>15.3</item>
+        <item>15.4</item>
+        <item>15.4</item>
+        <item>15.5</item>
+        <item>15.5</item>
+        <item>15.6</item>
+        <item>15.6</item>
+        <item>15.7</item>
+        <item>15.7</item>
+        <item>15.8</item>
+        <item>15.8</item>
+        <item>15.9</item>
+        <item>15.9</item>
+        <item>16.0</item>
+        <item>16.0</item>
+        <item>16.1</item>
+        <item>16.1</item>
+        <item>16.2</item>
+        <item>16.2</item>
+        <item>16.2</item>
+        <item>16.3</item>
+        <item>16.3</item>
+        <item>16.3</item>
+        <item>16.4</item>
+        <item>16.4</item>
+        <item>16.4</item>
+        <item>16.5</item>
+        <item>16.5</item>
+        <item>16.5</item>
+        <item>16.6</item>
+        <item>16.6</item>
+        <item>16.6</item>
+        <item>16.7</item>
+        <item>16.7</item>
+        <item>16.8</item>
+        <item>16.8</item>
+        <item>16.9</item>
+        <item>17.0</item>
+        <item>17.0</item>
+        <item>17.1</item>
+        <item>17.2</item>
+        <item>17.3</item>
+        <item>17.3</item>
+        <item>17.4</item>
+        <item>17.6</item>
+        <item>17.7</item>
+        <item>17.7</item>
+        <item>17.8</item>
+        <item>17.9</item>
+        <item>18.0</item>
+        <item>18.0</item>
+        <item>18.1</item>
+        <item>18.2</item>
+        <item>18.2</item>
+        <item>18.3</item>
+        <item>18.4</item>
+        <item>18.5</item>
+        <item>18.6</item>
+        <item>18.6</item>
+        <item>18.7</item>
+        <item>18.8</item>
+        <item>18.9</item>
+        <item>19.0</item>
+        <item>19.2</item>
+        <item>19.4</item>
+        <item>19.6</item>
+        <item>19.8</item>
+        <item>20.0</item>
+        <item>20.2</item>
+        <item>20.4</item>
+        <item>20.6</item>
+        <item>20.8</item>
+        <item>21.0</item>
+        <item>21.1</item>
+
+    </string-array>
+    <string-array name="num41W_2">
+        <item>15.8</item>
+        <item>15.9</item>
+        <item>16.0</item>
+        <item>16.0</item>
+        <item>16.1</item>
+        <item>16.1</item>
+        <item>16.2</item>
+        <item>16.2</item>
+        <item>16.3</item>
+        <item>16.3</item>
+        <item>16.4</item>
+        <item>16.4</item>
+        <item>16.5</item>
+        <item>16.5</item>
+        <item>16.6</item>
+        <item>16.6</item>
+        <item>16.7</item>
+        <item>16.7</item>
+        <item>16.8</item>
+        <item>16.8</item>
+        <item>16.9</item>
+        <item>16.9</item>
+        <item>17.0</item>
+        <item>17.0</item>
+        <item>17.1</item>
+        <item>17.1</item>
+        <item>17.2</item>
+        <item>17.2</item>
+        <item>17.2</item>
+        <item>17.3</item>
+        <item>17.3</item>
+        <item>17.3</item>
+        <item>17.4</item>
+        <item>17.4</item>
+        <item>17.4</item>
+        <item>17.5</item>
+        <item>17.5</item>
+        <item>17.5</item>
+        <item>17.6</item>
+        <item>17.6</item>
+        <item>17.6</item>
+        <item>17.7</item>
+        <item>17.7</item>
+        <item>17.8</item>
+        <item>17.8</item>
+        <item>17.9</item>
+        <item>18.0</item>
+        <item>18.0</item>
+        <item>18.1</item>
+        <item>18.2</item>
+        <item>18.3</item>
+        <item>18.3</item>
+        <item>18.4</item>
+        <item>18.6</item>
+        <item>18.7</item>
+        <item>18.7</item>
+        <item>18.8</item>
+        <item>18.9</item>
+        <item>19.0</item>
+        <item>19.0</item>
+        <item>19.1</item>
+        <item>19.2</item>
+        <item>19.2</item>
+        <item>19.3</item>
+        <item>19.4</item>
+        <item>19.5</item>
+        <item>19.6</item>
+        <item>19.6</item>
+        <item>19.7</item>
+        <item>19.8</item>
+        <item>19.9</item>
+        <item>20.0</item>
+        <item>20.2</item>
+        <item>20.4</item>
+        <item>20.5</item>
+        <item>20.6</item>
+        <item>20.8</item>
+        <item>21.0</item>
+        <item>21.2</item>
+        <item>21.4</item>
+        <item>21.5</item>
+        <item>21.6</item>
+        <item>21.8</item>
+
+    </string-array>
+    <string-array name="num42W_1">
+        <item>29.0</item>
+        <item>29.1</item>
+        <item>29.2</item>
+        <item>29.3</item>
+        <item>29.4</item>
+        <item>29.5</item>
+        <item>29.6</item>
+        <item>29.7</item>
+        <item>29.7</item>
+        <item>29.8</item>
+        <item>29.9</item>
+        <item>30.0</item>
+        <item>30.0</item>
+        <item>30.1</item>
+        <item>30.2</item>
+        <item>30.3</item>
+        <item>30.3</item>
+        <item>30.4</item>
+        <item>30.5</item>
+        <item>30.6</item>
+        <item>30.6</item>
+        <item>30.7</item>
+        <item>30.8</item>
+        <item>30.9</item>
+        <item>30.9</item>
+        <item>31.0</item>
+        <item>31.1</item>
+        <item>31.2</item>
+        <item>31.2</item>
+        <item>31.3</item>
+        <item>31.4</item>
+        <item>31.5</item>
+        <item>31.5</item>
+        <item>31.6</item>
+        <item>31.6</item>
+        <item>31.7</item>
+        <item>31.8</item>
+        <item>31.8</item>
+        <item>31.9</item>
+        <item>31.9</item>
+        <item>32.0</item>
+        <item>32.2</item>
+        <item>32.4</item>
+        <item>32.6</item>
+        <item>32.9</item>
+        <item>33.1</item>
+        <item>33.3</item>
+        <item>33.5</item>
+        <item>33.7</item>
+        <item>34.0</item>
+        <item>34.1</item>
+        <item>34.2</item>
+        <item>34.3</item>
+        <item>34.4</item>
+        <item>34.5</item>
+        <item>34.6</item>
+        <item>34.7</item>
+        <item>34.8</item>
+        <item>34.9</item>
+        <item>35.0</item>
+        <item>35.1</item>
+        <item>35.2</item>
+        <item>35.3</item>
+        <item>35.4</item>
+        <item>35.5</item>
+        <item>35.6</item>
+        <item>35.7</item>
+        <item>35.8</item>
+        <item>35.9</item>
+        <item>36.0</item>
+        <item>36.1</item>
+        <item>36.2</item>
+        <item>36.3</item>
+        <item>36.4</item>
+        <item>36.5</item>
+        <item>36.6</item>
+        <item>36.7</item>
+        <item>36.8</item>
+        <item>36.9</item>
+        <item>37.0</item>
+        <item>37.1</item>
+        <item>37.2</item>
+        <item>37.3</item>
+
+    </string-array>
+    <string-array name="num42W_2">
+        <item>31.0</item>
+        <item>31.1</item>
+        <item>31.2</item>
+        <item>31.3</item>
+        <item>31.4</item>
+        <item>31.5</item>
+        <item>31.6</item>
+        <item>31.7</item>
+        <item>31.7</item>
+        <item>31.8</item>
+        <item>31.9</item>
+        <item>32.0</item>
+        <item>32.0</item>
+        <item>32.1</item>
+        <item>32.2</item>
+        <item>32.3</item>
+        <item>32.3</item>
+        <item>32.4</item>
+        <item>32.5</item>
+        <item>32.6</item>
+        <item>32.6</item>
+        <item>32.7</item>
+        <item>32.8</item>
+        <item>32.9</item>
+        <item>32.9</item>
+        <item>33.0</item>
+        <item>33.1</item>
+        <item>33.2</item>
+        <item>33.2</item>
+        <item>33.3</item>
+        <item>33.4</item>
+        <item>33.5</item>
+        <item>33.5</item>
+        <item>33.6</item>
+        <item>33.6</item>
+        <item>33.7</item>
+        <item>33.8</item>
+        <item>33.8</item>
+        <item>33.9</item>
+        <item>33.9</item>
+        <item>34.0</item>
+        <item>34.2</item>
+        <item>34.4</item>
+        <item>34.6</item>
+        <item>34.9</item>
+        <item>35.1</item>
+        <item>35.3</item>
+        <item>35.5</item>
+        <item>35.7</item>
+        <item>36.0</item>
+        <item>36.1</item>
+        <item>36.2</item>
+        <item>36.3</item>
+        <item>36.4</item>
+        <item>36.5</item>
+        <item>36.6</item>
+        <item>36.7</item>
+        <item>36.8</item>
+        <item>36.9</item>
+        <item>37.0</item>
+        <item>37.1</item>
+        <item>37.2</item>
+        <item>37.3</item>
+        <item>37.4</item>
+        <item>37.5</item>
+        <item>37.6</item>
+        <item>37.7</item>
+        <item>37.8</item>
+        <item>37.9</item>
+        <item>38.0</item>
+        <item>38.1</item>
+        <item>38.2</item>
+        <item>38.3</item>
+        <item>38.4</item>
+        <item>38.5</item>
+        <item>38.6</item>
+        <item>38.7</item>
+        <item>38.8</item>
+        <item>38.9</item>
+        <item>39.0</item>
+        <item>39.1</item>
+        <item>39.2</item>
+        <item>39.3</item>
+
+    </string-array>
+    <string-array name="num57W_1">
+        <item> 1.25</item>
+        <item> 1.27</item>
+        <item> 1.29</item>
+        <item> 1.31</item>
+        <item> 1.33</item>
+        <item> 1.35</item>
+        <item> 1.37</item>
+        <item> 1.39</item>
+        <item> 1.41</item>
+        <item> 1.43</item>
+        <item> 1.45</item>
+        <item> 1.47</item>
+        <item> 1.49</item>
+        <item> 1.51</item>
+        <item> 1.53</item>
+        <item> 1.55</item>
+        <item> 1.57</item>
+        <item> 1.59</item>
+        <item> 2.01</item>
+        <item> 2.03</item>
+        <item> 2.05</item>
+        <item> 2.07</item>
+        <item> 2.09</item>
+        <item> 2.11</item>
+        <item> 2.13</item>
+        <item> 2.15</item>
+        <item> 2.17</item>
+        <item> 2.19</item>
+        <item> 2.21</item>
+        <item> 2.23</item>
+        <item> 2.25</item>
+        <item> 2.27</item>
+        <item> 2.29</item>
+        <item> 2.31</item>
+        <item> 2.33</item>
+        <item> 2.35</item>
+        <item> 2.37</item>
+        <item> 2.39</item>
+        <item> 2.41</item>
+        <item> 2.43</item>
+        <item> 2.45</item>
+        <item> 2.47</item>
+        <item> 2.49</item>
+        <item> 2.51</item>
+        <item> 2.53</item>
+        <item> 2.55</item>
+        <item> 2.57</item>
+        <item> 2.59</item>
+        <item> 3.01</item>
+        <item> 3.03</item>
+        <item> 3.05</item>
+        <item> 3.07</item>
+        <item> 3.09</item>
+        <item> 3.11</item>
+        <item> 3.13</item>
+        <item> 3.15</item>
+        <item> 3.17</item>
+        <item> 3.19</item>
+        <item> 3.21</item>
+        <item> 3.23</item>
+        <item> 3.25</item>
+        <item> 3.27</item>
+        <item> 3.29</item>
+        <item> 3.31</item>
+        <item> 3.33</item>
+        <item> 3.35</item>
+        <item> 3.37</item>
+        <item> 3.39</item>
+        <item> 3.41</item>
+        <item> 3.43</item>
+        <item> 3.45</item>
+        <item> 3.47</item>
+        <item> 3.49</item>
+        <item> 3.51</item>
+        <item> 3.53</item>
+        <item> 3.55</item>
+        <item> 3.57</item>
+        <item> 3.59</item>
+        <item> 4.01</item>
+        <item> 4.03</item>
+        <item> 4.05</item>
+        <item> 4.07</item>
+        <item> 4.09</item>
+
+    </string-array>
+    <string-array name="num57W_2">
+        <item>1.35</item>
+        <item>1.37</item>
+        <item>1.39</item>
+        <item>1.41</item>
+        <item>1.43</item>
+        <item>1.45</item>
+        <item>1.47</item>
+        <item>1.49</item>
+        <item>1.51</item>
+        <item>1.53</item>
+        <item>1.55</item>
+        <item>1.57</item>
+        <item>1.59</item>
+        <item>2.01</item>
+        <item>2.03</item>
+        <item>2.05</item>
+        <item>2.07</item>
+        <item>2.09</item>
+        <item>2.11</item>
+        <item>2.13</item>
+        <item>2.15</item>
+        <item>2.17</item>
+        <item>2.19</item>
+        <item>2.21</item>
+        <item>2.23</item>
+        <item>2.25</item>
+        <item>2.27</item>
+        <item>2.29</item>
+        <item>2.31</item>
+        <item>2.33</item>
+        <item>2.35</item>
+        <item>2.37</item>
+        <item>2.39</item>
+        <item>2.41</item>
+        <item>2.43</item>
+        <item>2.45</item>
+        <item>2.47</item>
+        <item>2.49</item>
+        <item>2.51</item>
+        <item>2.53</item>
+        <item>2.55</item>
+        <item>2.57</item>
+        <item>2.59</item>
+        <item>3.01</item>
+        <item>3.03</item>
+        <item>3.05</item>
+        <item>3.07</item>
+        <item>3.09</item>
+        <item>3.11</item>
+        <item>3.13</item>
+        <item>3.15</item>
+        <item>3.17</item>
+        <item>3.19</item>
+        <item>3.21</item>
+        <item>3.23</item>
+        <item>3.25</item>
+        <item>3.27</item>
+        <item>3.29</item>
+        <item>3.31</item>
+        <item>3.33</item>
+        <item>3.35</item>
+        <item>3.37</item>
+        <item>3.39</item>
+        <item>3.41</item>
+        <item>3.43</item>
+        <item>3.45</item>
+        <item>3.47</item>
+        <item>3.49</item>
+        <item>3.51</item>
+        <item>3.53</item>
+        <item>3.55</item>
+        <item>3.57</item>
+        <item>3.59</item>
+        <item>4.01</item>
+        <item>4.03</item>
+        <item>4.05</item>
+        <item>4.07</item>
+        <item>4.09</item>
+        <item>4.11</item>
+        <item>4.13</item>
+        <item>4.15</item>
+        <item>4.17</item>
+        <item>4.19</item>
+
+    </string-array>
+    <string-array name="num57Wa">
+        <item>36.0</item>
+        <item>36.3</item>
+        <item>36.6</item>
+        <item>36.9</item>
+        <item>37.2</item>
+        <item>37.5</item>
+        <item>37.8</item>
+        <item>38.1</item>
+        <item>38.4</item>
+        <item>38.7</item>
+        <item>39.0</item>
+        <item>39.3</item>
+        <item>39.6</item>
+        <item>39.9</item>
+        <item>40.2</item>
+        <item>40.5</item>
+        <item>40.8</item>
+        <item>41.1</item>
+        <item>41.4</item>
+        <item>41.7</item>
+        <item>42.0</item>
+        <item>42.3</item>
+        <item>42.6</item>
+        <item>42.9</item>
+        <item>43.2</item>
+        <item>43.5</item>
+        <item>43.8</item>
+        <item>44.1</item>
+        <item>44.4</item>
+        <item>44.7</item>
+        <item>45.0</item>
+        <item>45.3</item>
+        <item>45.6</item>
+        <item>45.9</item>
+        <item>46.2</item>
+        <item>46.5</item>
+        <item>46.8</item>
+        <item>47.1</item>
+        <item>47.4</item>
+        <item>47.7</item>
+        <item>48.0</item>
+        <item>48.3</item>
+        <item>48.6</item>
+        <item>48.9</item>
+        <item>49.2</item>
+        <item>49.5</item>
+        <item>49.8</item>
+        <item>50.1</item>
+        <item>50.4</item>
+        <item>50.7</item>
+        <item>51.0</item>
+        <item>51.3</item>
+        <item>51.6</item>
+        <item>51.9</item>
+        <item>52.2</item>
+        <item>52.5</item>
+        <item>52.8</item>
+        <item>53.1</item>
+        <item>53.4</item>
+        <item>53.7</item>
+        <item>54.0</item>
+        <item>54.3</item>
+        <item>54.6</item>
+        <item>54.9</item>
+        <item>55.2</item>
+        <item>55.5</item>
+        <item>55.8</item>
+        <item>56.1</item>
+        <item>56.4</item>
+        <item>56.7</item>
+        <item>57.0</item>
+        <item>57.3</item>
+        <item>57.6</item>
+        <item>57.9</item>
+        <item>58.2</item>
+        <item>58.5</item>
+        <item>58.8</item>
+        <item>59.1</item>
+        <item>59.4</item>
+        <item>59.7</item>
+        <item>1.00.0</item>
+        <item>1.00.3</item>
+        <item>1.00.6</item>
+
+    </string-array>
+    <string-array name="num58W_1">
+        <item>1.45</item>
+        <item>1.47</item>
+        <item>1.49</item>
+        <item>1.51</item>
+        <item>1.53</item>
+        <item>1.55</item>
+        <item>1.57</item>
+        <item>1.59</item>
+        <item>2.01</item>
+        <item>2.03</item>
+        <item>2.05</item>
+        <item>2.07</item>
+        <item>2.09</item>
+        <item>2.11</item>
+        <item>2.13</item>
+        <item>2.15</item>
+        <item>2.17</item>
+        <item>2.19</item>
+        <item>2.21</item>
+        <item>2.23</item>
+        <item>2.25</item>
+        <item>2.27</item>
+        <item>2.29</item>
+        <item>2.31</item>
+        <item>2.33</item>
+        <item>2.35</item>
+        <item>2.37</item>
+        <item>2.39</item>
+        <item>2.41</item>
+        <item>2.43</item>
+        <item>2.45</item>
+        <item>2.47</item>
+        <item>2.49</item>
+        <item>2.51</item>
+        <item>2.53</item>
+        <item>2.55</item>
+        <item>2.57</item>
+        <item>2.59</item>
+        <item>3.01</item>
+        <item>3.03</item>
+        <item>3.05</item>
+        <item>3.07</item>
+        <item>3.09</item>
+        <item>3.11</item>
+        <item>3.13</item>
+        <item>3.15</item>
+        <item>3.17</item>
+        <item>3.19</item>
+        <item>3.21</item>
+        <item>3.23</item>
+        <item>3.25</item>
+        <item>3.27</item>
+        <item>3.29</item>
+        <item>3.31</item>
+        <item>3.33</item>
+        <item>3.35</item>
+        <item>3.37</item>
+        <item>3.39</item>
+        <item>3.41</item>
+        <item>3.43</item>
+        <item>3.45</item>
+        <item>3.47</item>
+        <item>3.49</item>
+        <item>3.51</item>
+        <item>3.53</item>
+        <item>3.55</item>
+        <item>3.57</item>
+        <item>3.59</item>
+        <item>4.01</item>
+        <item>4.03</item>
+        <item>4.05</item>
+        <item>4.07</item>
+        <item>4.09</item>
+        <item>4.11</item>
+        <item>4.13</item>
+        <item>4.15</item>
+        <item>4.17</item>
+        <item>4.19</item>
+        <item>4.21</item>
+        <item>4.23</item>
+        <item>4.25</item>
+        <item>4.27</item>
+        <item>4.29</item>
+
+    </string-array>
+    <string-array name="num58W_2">
+       <item>1.55</item>
+       <item>1.57</item>
+       <item>1.59</item>
+       <item>2.01</item>
+       <item>2.03</item>
+       <item>2.05</item>
+       <item>2.07</item>
+       <item>2.09</item>
+       <item>2.11</item>
+       <item>2.13</item>
+       <item>2.15</item>
+       <item>2.17</item>
+       <item>2.19</item>
+       <item>2.21</item>
+       <item>2.23</item>
+       <item>2.25</item>
+       <item>2.27</item>
+       <item>2.29</item>
+       <item>2.31</item>
+       <item>2.33</item>
+       <item>2.35</item>
+       <item>2.37</item>
+       <item>2.39</item>
+       <item>2.41</item>
+       <item>2.43</item>
+       <item>2.45</item>
+       <item>2.47</item>
+       <item>2.49</item>
+       <item>2.51</item>
+       <item>2.53</item>
+       <item>2.55</item>
+       <item>2.57</item>
+       <item>2.59</item>
+       <item>3.01</item>
+       <item>3.03</item>
+       <item>3.05</item>
+       <item>3.07</item>
+       <item>3.09</item>
+       <item>3.11</item>
+       <item>3.13</item>
+       <item>3.15</item>
+       <item>3.17</item>
+       <item>3.19</item>
+       <item>3.21</item>
+       <item>3.23</item>
+       <item>3.25</item>
+       <item>3.27</item>
+       <item>3.29</item>
+       <item>3.31</item>
+       <item>3.33</item>
+       <item>3.35</item>
+       <item>3.37</item>
+       <item>3.39</item>
+       <item>3.41</item>
+       <item>3.43</item>
+       <item>3.45</item>
+       <item>3.47</item>
+       <item>3.49</item>
+       <item>3.51</item>
+       <item>3.53</item>
+       <item>3.55</item>
+       <item>3.57</item>
+       <item>3.59</item>
+       <item>4.01</item>
+       <item>4.03</item>
+       <item>4.05</item>
+       <item>4.07</item>
+       <item>4.09</item>
+       <item>4.11</item>
+       <item>4.13</item>
+       <item>4.15</item>
+       <item>4.17</item>
+       <item>4.19</item>
+       <item>4.21</item>
+       <item>4.23</item>
+       <item>4.25</item>
+       <item>4.27</item>
+       <item>4.29</item>
+       <item>4.31</item>
+       <item>4.33</item>
+       <item>4.35</item>
+       <item>4.37</item>
+       <item>4.39</item>
+
+    </string-array>
 </resources>

@@ -17,7 +17,28 @@
     <string name="m_sec">мСек</string>
     <string name="sec">сек</string>
     <string name="min">мин</string>
-    <string name="speed">Скорость</string>
+    <string name="speed">Скорость:</string>
+    <string name="metr">Метров</string>
+    <string name="smetr">Сантиметров</string>
+    <string name="WS">Военно-прикладные навыки:</string>
+    <string name="mmetr">Милиметров</string>
+    <string name="agility">Ловкость:</string>
+    <string name="mark">Оценка</string>
+    <string name="itog">Рассчитать</string>
+    <string name="exercises">Упражнение</string>
+    <string name="results">Результат</string>
+    <string name="marks">баллов</string>
+    <string name="your_results">Ваш результат</string>
+    <string name="_400">400</string>
+    <string name="mark_normal">Оценка "Удовлетворительно"</string>
+    <string name="mark_good">Оценка "Хорошо"</string>
+    <string name="mark_perfect">Оценка "Отлично"</string>
+    <string name="level_3">3 уровень</string>
+    <string name="level_2">2 уровень</string>
+    <string name="level_1">1 уровень</string>
+    <string name="max_level">Высший уровень</string>
+    <string name="your_mark">Ваша оценка</string>
+    <string name="close">Закрыть</string>
 
     <string-array name="spinner_categories">
         <item>1 категория</item>
