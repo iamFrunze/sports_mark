@@ -6,21 +6,16 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
-
-import com.byfrunze.sportsball.models.ModelOfMark;
+import com.byfrunze.sportsball.models.ModelOfResultsMarks;
 import com.byfrunze.sportsball.models.ModelWarriorMark;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
 import java.util.List;
 
 
 public class ExpViewModel extends AndroidViewModel {
 
-    private MutableLiveData<ModelOfMark> markMutableLiveData;
 
     private MutableLiveData<Integer> currentStrength;
     private MutableLiveData<Integer> currentSpeed;
@@ -35,13 +30,11 @@ public class ExpViewModel extends AndroidViewModel {
     private int currentArrayWS;
     private int currentArrayAgility;
 
-    private int age;
-    private int weight;
-    private final int MAX_SIZE = 94;
-    private final int MIN_SIZE = 0;
+    private MutableLiveData<ModelOfResultsMarks> MLDModelRes;
 
     public ExpViewModel(@NonNull Application application) {
         super(application);
+        MLDModelRes = new MutableLiveData<>();
         currentStrength = new MutableLiveData<>();
         currentSpeed = new MutableLiveData<>();
         currentStamina = new MutableLiveData<>();
@@ -51,17 +44,30 @@ public class ExpViewModel extends AndroidViewModel {
 
     }
 
-    public MutableLiveData<Integer> setTextViewStrength(String pos) {
+    MutableLiveData<ModelOfResultsMarks> getMLDModelRes(int sex_id, String radioChecked, ModelWarriorMark model) {
+        MathemLogic mathemLogic = new MathemLogic(model);
+        switch (sex_id) {
+            case 0:
+                MLDModelRes.setValue(mathemLogic.setupCategories(radioChecked));
+                return MLDModelRes;
+            case 1:
+                MLDModelRes.setValue(mathemLogic.setupCategoriesWoman());
+                return MLDModelRes;
+            default:
+                return null;
+        }
+    }
+
+    MutableLiveData<Integer> setTextViewStrength(String pos) {
         List<String> set = new ArrayList<>(Arrays.asList(getApplication().getResources().getStringArray(currentArrayStrength)));
         for ( int i = set.size(); i < 101; i++){
             set.add("0");
         }
         Collections.reverse(set);
-        Log.i("TAG", "setTextViewStrength: "+ set.toString());
         currentStrength.setValue(set.indexOf(pos));
         return currentStrength;
     }
-    public MutableLiveData<Integer> setTextViewSpeed(String pos) {
+    MutableLiveData<Integer> setTextViewSpeed(String pos) {
         List<String> set = new ArrayList<>(Arrays.asList(getApplication().getResources().getStringArray(currentArraySpeed)));
         for ( int i = set.size(); i < 101; i++){
             set.add("0");
@@ -70,7 +76,7 @@ public class ExpViewModel extends AndroidViewModel {
         currentSpeed.setValue(set.indexOf(pos));
         return currentSpeed;
     }
-    public MutableLiveData<Integer> setTextViewStamina(String pos) {
+    MutableLiveData<Integer> setTextViewStamina(String pos) {
         List<String> set = new ArrayList<>(Arrays.asList(getApplication().getResources().getStringArray(currentArrayStamina)));
         for ( int i = set.size(); i < 101; i++){
             set.add("0");
@@ -79,7 +85,7 @@ public class ExpViewModel extends AndroidViewModel {
         currentStamina.setValue(set.indexOf(pos));
         return currentStamina;
     }
-    public MutableLiveData<Integer> setTextViewWS(String pos) {
+    MutableLiveData<Integer> setTextViewWS(String pos) {
         List<String> set = new ArrayList<>(Arrays.asList(getApplication().getResources().getStringArray(currentArrayWS)));
         for ( int i = set.size(); i < 101; i++){
             set.add("0");
@@ -88,7 +94,7 @@ public class ExpViewModel extends AndroidViewModel {
         currentWS.setValue(set.indexOf(pos));
         return currentWS;
     }
-    public MutableLiveData<Integer> setTextViewAgility(String pos) {
+    MutableLiveData<Integer> setTextViewAgility(String pos) {
         List<String> set = new ArrayList<>(Arrays.asList(getApplication().getResources().getStringArray(currentArrayAgility)));
         for ( int i = set.size(); i < 101; i++){
             set.add("0");
@@ -98,23 +104,23 @@ public class ExpViewModel extends AndroidViewModel {
         return currentAgility;
     }
 
-    public void setCurrentArrayStrength(int currentArrayStrength) {
+    void setCurrentArrayStrength(int currentArrayStrength) {
         this.currentArrayStrength = currentArrayStrength;
     }
 
-    public void setCurrentArraySpeed(int currentArraySpeed) {
+    void setCurrentArraySpeed(int currentArraySpeed) {
         this.currentArraySpeed = currentArraySpeed;
     }
 
-    public void setCurrentArrayStamina(int currentArrayStamina) {
+    void setCurrentArrayStamina(int currentArrayStamina) {
         this.currentArrayStamina = currentArrayStamina;
     }
 
-    public void setCurrentArrayWS(int currentArrayWS) {
+    void setCurrentArrayWS(int currentArrayWS) {
         this.currentArrayWS = currentArrayWS;
     }
 
-    public void setCurrentArrayAgility(int currentArrayAgility) {
+    void setCurrentArrayAgility(int currentArrayAgility) {
         this.currentArrayAgility = currentArrayAgility;
     }
 }

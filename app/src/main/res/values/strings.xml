@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sports ball</string>
+    <string name="app_name">ФизПомощник</string>
     <string name="man">Мужчины</string>
     <string name="woman">Женщины</string>
     <string name="title_activity_set_exercise">SetExerciseActivity</string>
@@ -11,7 +11,7 @@
     <string name="_3">3</string>
     <string name="_5">5</string>
     <string name="_4">4</string>
-    <string name="count_exp">Количество упраждений</string>
+    <string name="count_exp">Количество упражнений</string>
     <string name="weight">Вес</string>
     <string name="count">Количество</string>
     <string name="m_sec">мСек</string>
@@ -39,6 +39,11 @@
     <string name="max_level">Высший уровень</string>
     <string name="your_mark">Ваша оценка</string>
     <string name="close">Закрыть</string>
+    <string name="take_categories">Выберите Вашу категорию</string>
+    <string name="_0">0</string>
+    <string name="_100">100</string>
+    <string name="count_points">Колличество баллов</string>
+    <string name="lvl_mark">Уровень (Оценка)</string>
 
     <string-array name="spinner_categories">
         <item>1 категория</item>

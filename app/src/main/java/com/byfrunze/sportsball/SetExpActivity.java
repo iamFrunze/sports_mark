@@ -3,8 +3,6 @@ package com.byfrunze.sportsball;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -31,6 +29,7 @@ import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -99,15 +98,19 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
     MaterialCardView cardViewAgility;
     @BindView(R.id.m_toolbar)
     Toolbar mToolbar;
+    @BindView(R.id.textViewCurrentPoints)
+    TextView textViewCurrentPoints;
+    @BindView(R.id.textViewCurrentMark)
+    TextView textViewCurrentMark;
+    @BindView(R.id.textViewCategories)
+    TextView textViewCategories;
 
     private ExpViewModel viewModel;
 
     private String countExerc;
     private ModelOfMark modelOfMark;
     LifecycleOwner owner;
-
-    private ModelWarriorMark modelWarriorMark;
-
+    private int sex_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,7 +120,7 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
         mToolbar.setTitle("Калькулятор");
         setSupportActionBar(mToolbar);
         mToolbar.setTitleTextColor(getResources().getColor(R.color.white));
-        getSupportActionBar().setHomeButtonEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         owner = this;
         viewModel = ViewModelProviders.of(this).get(ExpViewModel.class);
@@ -126,7 +129,7 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
         adapterCategories.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCategories.setAdapter(adapterCategories);
         countExerc = radioButton3.getTag().toString();
-        int sex_id = getIntent().getIntExtra("SEX_ID", 0);
+        sex_id = getIntent().getIntExtra("SEX_ID", 0);
         setupAllSpinner(sex_id);
         cardViewStrenth.setVisibility(View.GONE);
         cardViewSpeed.setVisibility(View.GONE);
@@ -134,7 +137,6 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
         cardViewWS.setVisibility(View.GONE);
         cardViewAgility.setVisibility(View.GONE);
         modelOfMark = new ModelOfMark();
-
 
         onSelectedStrengthRes();
         onSelectedSpeedRes();
@@ -146,9 +148,10 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
         if (sex_id == 1) {
             radioButton4.setVisibility(View.GONE);
             radioButton5.setVisibility(View.GONE);
-        }
+            textViewCategories.setVisibility(View.GONE);
+            spinnerCategories.setVisibility(View.GONE);
 
-        Log.i("TAG", "onCreate: " + radioButton4.getId() + " " + radioButton5.getId());
+        }
     }
 
 
@@ -162,13 +165,11 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                this.finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        if (item.getItemId() == android.R.id.home) {
+            this.finish();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
 
     }
 
@@ -263,7 +264,7 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
                         ArrayAdapter.createFromResource(this, R.array.name_agility, android.R.layout.simple_spinner_item);
                 adapterAgility.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnerAgility.setAdapter(adapterAgility);
-                onSelectedAgility(sex_id);
+                onSelectedAgility();
                 break;
             case 2:
                 //курсанты
@@ -311,7 +312,7 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
                                 setupSpinnerResults(spinnerStrengthResults, R.array.num7);
                                 break;
                             case 6:
-                                if (Integer.parseInt(editTextWeight.getText().toString()) < 70)
+                                if (Integer.parseInt(Objects.requireNonNull(editTextWeight.getText()).toString()) < 70)
                                     setupSpinnerResults(spinnerStrengthResults, R.array.num8_1);
                                 else setupSpinnerResults(spinnerStrengthResults, R.array.num8_2);
                                 break;
@@ -322,17 +323,17 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
                                 setupSpinnerResults(spinnerStrengthResults, R.array.num10);
                                 break;
                             case 9:
-                                if (Integer.parseInt(editTextWeight.getText().toString()) < 70)
+                                if (Integer.parseInt(Objects.requireNonNull(editTextWeight.getText()).toString()) < 70)
                                     setupSpinnerResults(spinnerStrengthResults, R.array.num11_1);
                                 else setupSpinnerResults(spinnerStrengthResults, R.array.num11_2);
                                 break;
                             case 10:
-                                if (Integer.parseInt(editTextWeight.getText().toString()) < 70)
+                                if (Integer.parseInt(Objects.requireNonNull(editTextWeight.getText()).toString()) < 70)
                                     setupSpinnerResults(spinnerStrengthResults, R.array.num12_1);
                                 else setupSpinnerResults(spinnerStrengthResults, R.array.num12_2);
                                 break;
                             case 11:
-                                if (Integer.parseInt(editTextWeight.getText().toString()) < 70)
+                                if (Integer.parseInt(Objects.requireNonNull(editTextWeight.getText()).toString()) < 70)
                                     setupSpinnerResults(spinnerStrengthResults, R.array.num13_1);
                                 else setupSpinnerResults(spinnerStrengthResults, R.array.num13_2);
                                 break;
@@ -353,12 +354,12 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         switch (position) {
                             case 0:
-                                if (Integer.parseInt(editTextAge.getText().toString()) < 30)
+                                if (Integer.parseInt(Objects.requireNonNull(editTextAge.getText()).toString()) < 30)
                                     setupSpinnerResults(spinnerStrengthResults, R.array.num1W_1);
                                 else setupSpinnerResults(spinnerStrengthResults, R.array.num1W_2);
                                 break;
                             case 1:
-                                if (Integer.parseInt(editTextAge.getText().toString()) < 30)
+                                if (Integer.parseInt(Objects.requireNonNull(editTextAge.getText()).toString()) < 30)
                                     setupSpinnerResults(spinnerStrengthResults, R.array.num2W_1);
                                 else setupSpinnerResults(spinnerStrengthResults, R.array.num2W_2);
                                 break;
@@ -386,12 +387,12 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
                                 setupSpinnerResults(spinnerStaminaResults, R.array.num43);
                                 break;
                             case 1:
-                                if (Integer.parseInt(editTextAge.getText().toString()) < 35)
+                                if (Integer.parseInt(Objects.requireNonNull(editTextAge.getText()).toString()) < 35)
                                     setupSpinnerResults(spinnerStaminaResults, R.array.num45_1);
                                 else setupSpinnerResults(spinnerStaminaResults, R.array.num45_2);
                                 break;
                             case 2:
-                                if (Integer.parseInt(editTextAge.getText().toString()) < 35)
+                                if (Integer.parseInt(Objects.requireNonNull(editTextAge.getText()).toString()) < 35)
                                     setupSpinnerResults(spinnerStaminaResults, R.array.num46_1);
                                 else setupSpinnerResults(spinnerStaminaResults, R.array.num46_2);
                                 break;
@@ -422,7 +423,7 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         switch (position) {
                             case 0:
-                                if (Integer.parseInt(editTextAge.getText().toString()) < 30)
+                                if (Integer.parseInt(Objects.requireNonNull(editTextAge.getText()).toString()) < 30)
                                     setupSpinnerResults(spinnerStaminaResults, R.array.num45W_1);
                                 else setupSpinnerResults(spinnerStaminaResults, R.array.num45W_2);
                                 break;
@@ -480,28 +481,29 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
 
                     }
                 });
+                break;
             case 1:
                 spinnerSpeed.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         switch (position) {
                             case 0:
-                                if (Integer.parseInt(editTextAge.getText().toString()) < 30)
+                                if (Integer.parseInt(Objects.requireNonNull(editTextAge.getText()).toString()) < 30)
                                     setupSpinnerResults(spinnerSpeedResults, R.array.num40W_1);
                                 else setupSpinnerResults(spinnerSpeedResults, R.array.num40W_2);
                                 break;
                             case 1:
-                                if (Integer.parseInt(editTextAge.getText().toString()) < 30)
+                                if (Integer.parseInt(Objects.requireNonNull(editTextAge.getText()).toString()) < 30)
                                     setupSpinnerResults(spinnerSpeedResults, R.array.num41W_1);
                                 else setupSpinnerResults(spinnerSpeedResults, R.array.num41W_2);
                                 break;
                             case 2:
-                                if (Integer.parseInt(editTextAge.getText().toString()) < 30)
+                                if (Integer.parseInt(Objects.requireNonNull(editTextAge.getText()).toString()) < 30)
                                     setupSpinnerResults(spinnerSpeedResults, R.array.num42W_1);
                                 else setupSpinnerResults(spinnerSpeedResults, R.array.num42W_2);
                                 break;
                             case 3:
-                                if (Integer.parseInt(editTextAge.getText().toString()) < 30)
+                                if (Integer.parseInt(Objects.requireNonNull(editTextAge.getText()).toString()) < 30)
                                     setupSpinnerResults(spinnerSpeedResults, R.array.num57W_1);
                                 else setupSpinnerResults(spinnerSpeedResults, R.array.num57W_2);
                                 break;
@@ -509,7 +511,7 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
                                 setupSpinnerResults(spinnerSpeedResults, R.array.num57Wa);
                                 break;
                             case 5:
-                                if (Integer.parseInt(editTextAge.getText().toString()) < 30)
+                                if (Integer.parseInt(Objects.requireNonNull(editTextAge.getText()).toString()) < 30)
                                     setupSpinnerResults(spinnerSpeedResults, R.array.num58W_1);
                                 else setupSpinnerResults(spinnerSpeedResults, R.array.num58W_2);
                                 break;
@@ -564,8 +566,7 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
         }
     }
 
-    public void onSelectedAgility(int sex_id) {
-        // Добавить SWITCH для курсантов
+    public void onSelectedAgility() {
         spinnerAgility.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -594,14 +595,19 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 modelOfMark.setStrength((String) parent.getItemAtPosition(position));
                 viewModel.setTextViewStrength((String) parent.getItemAtPosition(position)).
-                        observe(owner, res -> {
-                            textViewStrenghtMark.setText(String.valueOf(res));
-                        });
+                        observe(owner, res -> textViewStrenghtMark.setText(String.valueOf(res)));
+                viewModel.getMLDModelRes(sex_id, countExerc, getModel()).observe(owner, res -> {
+                    textViewCurrentPoints.setText(String.valueOf(res.getResultsPoint()));
+                    textViewCurrentMark.setText(String.valueOf(res.getCurrentMark()));
+                });
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                viewModel.getMLDModelRes(sex_id, countExerc, getModel()).observe(owner, res -> {
+                    textViewCurrentPoints.setText(String.valueOf(res.getResultsPoint()));
+                    textViewCurrentMark.setText(String.valueOf(res.getCurrentMark()));
+                });
             }
         });
 
@@ -614,11 +620,18 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
                 modelOfMark.setSpeed((String) parent.getItemAtPosition(position));
                 viewModel.setTextViewSpeed((String) parent.getItemAtPosition(position)).
                         observe(owner, res -> textViewSpeedMark.setText(String.valueOf(res)));
+                viewModel.getMLDModelRes(sex_id, countExerc, getModel()).observe(owner, res -> {
+                    textViewCurrentPoints.setText(String.valueOf(res.getResultsPoint()));
+                    textViewCurrentMark.setText(String.valueOf(res.getCurrentMark()));
+                });
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                viewModel.getMLDModelRes(sex_id, countExerc, getModel()).observe(owner, res -> {
+                    textViewCurrentPoints.setText(String.valueOf(res.getResultsPoint()));
+                    textViewCurrentMark.setText(String.valueOf(res.getCurrentMark()));
+                });
             }
         });
 
@@ -631,11 +644,18 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
                 modelOfMark.setStamina((String) parent.getItemAtPosition(position));
                 viewModel.setTextViewStamina((String) parent.getItemAtPosition(position)).
                         observe(owner, res -> textViewStaminaMark.setText(String.valueOf(res)));
+                viewModel.getMLDModelRes(sex_id, countExerc, getModel()).observe(owner, res -> {
+                    textViewCurrentPoints.setText(String.valueOf(res.getResultsPoint()));
+                    textViewCurrentMark.setText(String.valueOf(res.getCurrentMark()));
+                });
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                viewModel.getMLDModelRes(sex_id, countExerc, getModel()).observe(owner, res -> {
+                    textViewCurrentPoints.setText(String.valueOf(res.getResultsPoint()));
+                    textViewCurrentMark.setText(String.valueOf(res.getCurrentMark()));
+                });
             }
         });
 
@@ -648,11 +668,18 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
                 modelOfMark.setWs((String) parent.getItemAtPosition(position));
                 viewModel.setTextViewWS((String) parent.getItemAtPosition(position)).
                         observe(owner, res -> textViewWSMark.setText(String.valueOf(res)));
+                viewModel.getMLDModelRes(sex_id, countExerc, getModel()).observe(owner, res -> {
+                    textViewCurrentPoints.setText(String.valueOf(res.getResultsPoint()));
+                    textViewCurrentMark.setText(String.valueOf(res.getCurrentMark()));
+                });
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                viewModel.getMLDModelRes(sex_id, countExerc, getModel()).observe(owner, res -> {
+                    textViewCurrentPoints.setText(String.valueOf(res.getResultsPoint()));
+                    textViewCurrentMark.setText(String.valueOf(res.getCurrentMark()));
+                });
             }
         });
 
@@ -665,31 +692,37 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
                 modelOfMark.setAgility((String) parent.getItemAtPosition(position));
                 viewModel.setTextViewAgility((String) parent.getItemAtPosition(position)).
                         observe(owner, res -> textViewAgilityMark.setText(String.valueOf(res)));
+                viewModel.getMLDModelRes(sex_id, countExerc, getModel()).observe(owner, res -> {
+                    textViewCurrentPoints.setText(String.valueOf(res.getResultsPoint()));
+                    textViewCurrentMark.setText(String.valueOf(res.getCurrentMark()));
+                });
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                viewModel.getMLDModelRes(sex_id, countExerc, getModel()).observe(owner, res -> {
+                    textViewCurrentPoints.setText(String.valueOf(res.getResultsPoint()));
+                    textViewCurrentMark.setText(String.valueOf(res.getCurrentMark()));
+                });
             }
         });
 
     }
 
     public void onClickItog(View view) {
-        if (editTextAge.getText().toString().equals("") || editTextWeight.getText().toString().equals(""))
+        if (Objects.requireNonNull(editTextAge.getText()).toString().equals("") || Objects.requireNonNull(editTextWeight.getText()).toString().equals(""))
             Snackbar.make(view, "Заполните данные", Snackbar.LENGTH_SHORT).setAnimationMode(Snackbar.ANIMATION_MODE_SLIDE).show();
         else {
             mDialogFragment dialogFragment = new mDialogFragment();
             Bundle bundle = new Bundle();
             bundle.putString("RId", countExerc);
+            bundle.putInt("sex_id", sex_id);
             dialogFragment.setArguments(bundle);
             dialogFragment.show(getSupportFragmentManager(), null);
-            Log.i("TAG", "onClickItog: " + radioGroup.getCheckedRadioButtonId());
         }
     }
 
     public void checkAge(int sex_id) {
-        String TAG = "TAG";
         editTextAge.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -780,6 +813,7 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
     }
 
     public void setupRadioGroup(int sex_id) {
+
         cardViewStrenth.setVisibility(View.VISIBLE);
         cardViewSpeed.setVisibility(View.VISIBLE);
         cardViewStamina.setVisibility(View.VISIBLE);
@@ -789,14 +823,26 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
                     countExerc = radioButton3.getTag().toString();
                     cardViewWS.setVisibility(View.GONE);
                     cardViewAgility.setVisibility(View.GONE);
+                    viewModel.getMLDModelRes(sex_id,countExerc, getModel()).observe(owner, res -> {
+                        textViewCurrentPoints.setText(String.valueOf(res.getResultsPoint()));
+                        textViewCurrentMark.setText(String.valueOf(res.getCurrentMark()));
+                    });
                 } else if (checkedId == radioButton4.getId()) {
                     countExerc = radioButton4.getTag().toString();
                     cardViewWS.setVisibility(View.VISIBLE);
                     cardViewAgility.setVisibility(View.GONE);
+                    viewModel.getMLDModelRes(sex_id,countExerc, getModel()).observe(owner, res -> {
+                        textViewCurrentPoints.setText(String.valueOf(res.getResultsPoint()));
+                        textViewCurrentMark.setText(String.valueOf(res.getCurrentMark()));
+                    });
                 } else {
                     countExerc = radioButton5.getTag().toString();
                     cardViewWS.setVisibility(View.VISIBLE);
                     cardViewAgility.setVisibility(View.VISIBLE);
+                    viewModel.getMLDModelRes(sex_id, countExerc, getModel()).observe(owner, res -> {
+                        textViewCurrentPoints.setText(String.valueOf(res.getResultsPoint()));
+                        textViewCurrentMark.setText(String.valueOf(res.getCurrentMark()));
+                    });
                 }
             });
         } else if (sex_id == 1) {
@@ -811,7 +857,7 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
         return new ModelWarriorMark(
                 0,
                 spinnerCategories.getSelectedItemPosition(),
-                Integer.parseInt(editTextAge.getText().toString()),
+                Integer.parseInt(Objects.requireNonNull(editTextAge.getText()).toString()),
                 radioGroup.getCheckedRadioButtonId(),
                 Integer.parseInt(textViewStrenghtMark.getText().toString()),
                 Integer.parseInt(textViewSpeedMark.getText().toString()),
@@ -819,4 +865,6 @@ public class SetExpActivity extends AppCompatActivity implements mDialogFragment
                 Integer.parseInt(textViewWSMark.getText().toString()),
                 Integer.parseInt(textViewAgilityMark.getText().toString()));
     }
+
+
 }

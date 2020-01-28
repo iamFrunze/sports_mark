@@ -13,7 +13,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+
+            android:paddingBottom="80dp">
+
             <include
                 android:id="@+id/m_toolbar"
                 layout="@layout/m_toolbar"
@@ -26,11 +29,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                app:met_floatingLabelText="@string/age"
-                app:met_floatingLabel="highlight"
                 android:hint="@string/age"
                 android:inputType="numberDecimal"
                 android:maxLength="3"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="@string/age"
                 app:met_maxCharacters="3"
                 app:met_minCharacters="2"
                 app:met_singleLineEllipsis="true" />
@@ -40,19 +43,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                app:met_floatingLabelText="@string/weight"
-                app:met_floatingLabel="highlight"
                 android:hint="@string/weight"
                 android:inputType="numberDecimal"
                 android:maxLength="3"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelText="@string/weight"
                 app:met_maxCharacters="3"
                 app:met_minCharacters="2"
                 app:met_singleLineEllipsis="true" />
 
+            <TextView
+                android:id="@+id/textViewCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/take_categories"
+                android:textAlignment="center" />
 
             <Spinner
                 android:id="@+id/spinner_categories"
                 android:layout_width="match_parent"
+                android:layout_margin="4dp"
                 android:layout_height="wrap_content" />
 
             <LinearLayout
@@ -155,7 +165,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
-                            android:text="100" />
+                            android:text="@string/_100" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -225,7 +235,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
-                            android:text="100" />
+                            android:text="@string/_100" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -294,7 +304,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
-                            android:text="100" />
+                            android:text="@string/_100" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -363,7 +373,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
-                            android:text="100" />
+                            android:text="@string/_100" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -432,7 +442,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
-                            android:text="100" />
+                            android:text="@string/_100" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -452,4 +462,66 @@
                 android:text="@string/itog" />
         </LinearLayout>
     </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:baselineAligned="false"
+        android:background="@drawable/bottom_circle"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="@string/count_points"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textViewCurrentPoints"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="@string/_0"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="@string/lvl_mark"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textViewCurrentMark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="@string/_0"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
