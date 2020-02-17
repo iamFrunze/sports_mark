@@ -1,4 +1,4 @@
-package com.byfrunze.sportsball;
+package com.byfrunze.sportsball.viewmodels;
 
 import android.app.Application;
 import android.util.Log;
@@ -6,8 +6,11 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
+
+import com.byfrunze.sportsball.logicapp.MathemLogic;
 import com.byfrunze.sportsball.models.ModelOfResultsMarks;
 import com.byfrunze.sportsball.models.ModelWarriorMark;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -44,7 +47,7 @@ public class ExpViewModel extends AndroidViewModel {
 
     }
 
-    MutableLiveData<ModelOfResultsMarks> getMLDModelRes(int sex_id, String radioChecked, ModelWarriorMark model) {
+    public MutableLiveData<ModelOfResultsMarks> getMLDModelRes(int sex_id, String radioChecked, ModelWarriorMark model) {
         MathemLogic mathemLogic = new MathemLogic(model);
         switch (sex_id) {
             case 0:
@@ -58,45 +61,49 @@ public class ExpViewModel extends AndroidViewModel {
         }
     }
 
-    MutableLiveData<Integer> setTextViewStrength(String pos) {
+    public MutableLiveData<Integer> setTextViewStrength(String pos) {
         List<String> set = new ArrayList<>(Arrays.asList(getApplication().getResources().getStringArray(currentArrayStrength)));
-        for ( int i = set.size(); i < 101; i++){
+        for (int i = set.size(); i < 101; i++) {
             set.add("0");
         }
         Collections.reverse(set);
         currentStrength.setValue(set.indexOf(pos));
         return currentStrength;
     }
-    MutableLiveData<Integer> setTextViewSpeed(String pos) {
+
+    public MutableLiveData<Integer> setTextViewSpeed(String pos) {
         List<String> set = new ArrayList<>(Arrays.asList(getApplication().getResources().getStringArray(currentArraySpeed)));
-        for ( int i = set.size(); i < 101; i++){
+        for (int i = set.size(); i < 101; i++) {
             set.add("0");
         }
         Collections.reverse(set);
         currentSpeed.setValue(set.indexOf(pos));
         return currentSpeed;
     }
-    MutableLiveData<Integer> setTextViewStamina(String pos) {
+
+    public MutableLiveData<Integer> setTextViewStamina(String pos) {
         List<String> set = new ArrayList<>(Arrays.asList(getApplication().getResources().getStringArray(currentArrayStamina)));
-        for ( int i = set.size(); i < 101; i++){
+        for (int i = set.size(); i < 101; i++) {
             set.add("0");
         }
         Collections.reverse(set);
         currentStamina.setValue(set.indexOf(pos));
         return currentStamina;
     }
-    MutableLiveData<Integer> setTextViewWS(String pos) {
+
+    public MutableLiveData<Integer> setTextViewWS(String pos) {
         List<String> set = new ArrayList<>(Arrays.asList(getApplication().getResources().getStringArray(currentArrayWS)));
-        for ( int i = set.size(); i < 101; i++){
+        for (int i = set.size(); i < 101; i++) {
             set.add("0");
         }
         Collections.reverse(set);
         currentWS.setValue(set.indexOf(pos));
         return currentWS;
     }
-    MutableLiveData<Integer> setTextViewAgility(String pos) {
+
+    public MutableLiveData<Integer> setTextViewAgility(String pos) {
         List<String> set = new ArrayList<>(Arrays.asList(getApplication().getResources().getStringArray(currentArrayAgility)));
-        for ( int i = set.size(); i < 101; i++){
+        for (int i = set.size(); i < 101; i++) {
             set.add("0");
         }
         Collections.reverse(set);
@@ -104,23 +111,23 @@ public class ExpViewModel extends AndroidViewModel {
         return currentAgility;
     }
 
-    void setCurrentArrayStrength(int currentArrayStrength) {
+    public void setCurrentArrayStrength(int currentArrayStrength) {
         this.currentArrayStrength = currentArrayStrength;
     }
 
-    void setCurrentArraySpeed(int currentArraySpeed) {
+    public void setCurrentArraySpeed(int currentArraySpeed) {
         this.currentArraySpeed = currentArraySpeed;
     }
 
-    void setCurrentArrayStamina(int currentArrayStamina) {
+    public void setCurrentArrayStamina(int currentArrayStamina) {
         this.currentArrayStamina = currentArrayStamina;
     }
 
-    void setCurrentArrayWS(int currentArrayWS) {
+    public void setCurrentArrayWS(int currentArrayWS) {
         this.currentArrayWS = currentArrayWS;
     }
 
-    void setCurrentArrayAgility(int currentArrayAgility) {
+    public void setCurrentArrayAgility(int currentArrayAgility) {
         this.currentArrayAgility = currentArrayAgility;
     }
 }
