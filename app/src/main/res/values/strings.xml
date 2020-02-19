@@ -90,10 +90,11 @@
     <string name="best_result">Лучший результат</string>
     <string name="last_result">Последний результат</string>
     <string name="calc_points">Расчет баллов</string>
+    <string name="calc_points_friends">Расчет баллов "\n" другу</string>
     <string name="history">История</string>
     <string name="method">Методика</string>
     <string name="calendar">Календарь</string>
-    <string name="free_money">Пожертвуй "\n" проекту</string>
+    <string name="free_money">Помоги проекту - посмотри рекламу!</string>
     <string name="settings">Настройки "\n" профиля</string>
     <string name="settings_menu">Настройки</string>
     <string name="take_course">Выберите Ваш курс</string>
