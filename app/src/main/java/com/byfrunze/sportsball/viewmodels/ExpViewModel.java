@@ -56,6 +56,11 @@ public class ExpViewModel extends AndroidViewModel {
             case 1:
                 MLDModelRes.setValue(mathemLogic.setupCategoriesWoman());
                 return MLDModelRes;
+            case 20:
+            case 21:
+            case 22:
+                MLDModelRes.setValue(mathemLogic.setupCadet(radioChecked, sex_id));
+                return MLDModelRes;
             default:
                 return null;
         }
