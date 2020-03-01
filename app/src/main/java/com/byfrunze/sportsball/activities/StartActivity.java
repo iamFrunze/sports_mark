@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -65,7 +67,6 @@ public class StartActivity extends AppCompatActivity {
     int sex_id = 0;
     int service = 0;
     int category = Integer.MAX_VALUE;
-    int course = Integer.MAX_VALUE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,9 +77,11 @@ public class StartActivity extends AppCompatActivity {
 
         RealmConfiguration configuration = new RealmConfiguration.Builder()
                 .name("person.realm")
-                .schemaVersion(1)
+                .schemaVersion(2)
                 .build();
-        mRealm = Realm.getInstance(configuration);
+        Realm.setDefaultConfiguration(configuration);
+        mRealm = Realm.getDefaultInstance();
+
 
         ArrayAdapter<CharSequence> adapterCategories =
                 ArrayAdapter.createFromResource(this, R.array.spinner_categories, R.layout.spinner_item);
@@ -89,36 +92,75 @@ public class StartActivity extends AppCompatActivity {
                 ArrayAdapter.createFromResource(this, R.array.spinner_cadet, R.layout.spinner_item);
         adapterCourse.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCourse.setAdapter(adapterCourse);
+        spinnerCourse.setOnItemSelectedListener(OnSelectCourse);
 
-        RBCadet.setOnClickListener(onClickRBService);
+        RBCadet.setOnClickListener(onClickRBCadet);
         RBContract.setOnClickListener(onClickRBService);
-        sexid_man.setOnClickListener(onClickRBSexId);
-        sexid_woman.setOnClickListener(onClickRBSexId);
+        sexid_man.setOnClickListener(onClickRBSexIdMan);
+        sexid_woman.setOnClickListener(onClickRBSexIdWoman);
     }
+
+    private OnItemSelectedListener OnSelectCourse = new OnItemSelectedListener() {
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            switch (position) {
+                case 0:
+                    sex_id = 20;    // 1 курс
+                    break;
+                case 1:
+                    sex_id = 21;    // 2 курс
+                    break;
+                case 2:
+                    sex_id = 22;    // 3 и старше курс
+                    break;
+                default:
+                    sex_id = 99;
+
+            }
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
+        }
+    };
 
     OnClickListener onClickRBService = new OnClickListener() {
         @Override
         public void onClick(View v) {
-            if (v.getTag().equals(RBCadet.getTag())) {
-                frameCourse.setVisibility(View.VISIBLE);
-                service = 1;
-            } else {
-                frameCourse.setVisibility(View.GONE);
-                service = 0;
+            if (sexid_woman.isChecked()) {
+                sex_id = 1;
+            } else if (sexid_man.isChecked()) {
+                sex_id = 0;
+                frameCategories.setVisibility(View.VISIBLE);
             }
+            frameCourse.setVisibility(View.GONE);
+        }
+    };
+    OnClickListener onClickRBCadet = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            sex_id = 20;
+            frameCourse.setVisibility(View.VISIBLE);
+            frameCategories.setVisibility(View.GONE);
         }
     };
 
-    OnClickListener onClickRBSexId = new OnClickListener() {
+    OnClickListener onClickRBSexIdMan = new OnClickListener() {
         @Override
         public void onClick(View v) {
-            if (v.getTag().equals(sexid_man.getTag())) {
-                frameCategories.setVisibility(View.VISIBLE);
+            if (RBContract.isChecked()) {
                 sex_id = 0;
-            } else {
-                frameCategories.setVisibility(View.GONE);
-                sex_id = 1;
-            }
+                frameCategories.setVisibility(View.VISIBLE);
+            } else frameCategories.setVisibility(View.GONE);
+
+        }
+    };
+    OnClickListener onClickRBSexIdWoman = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            frameCategories.setVisibility(View.GONE);
+            if (RBContract.isChecked()) sex_id = 1;
         }
     };
 
@@ -126,8 +168,7 @@ public class StartActivity extends AppCompatActivity {
         if (editTextName.length() < 2 || editTextAge.length() < 2 || editTextWeight.length() < 2) {
             Snackbar.make(view, "Заполните данные", Snackbar.LENGTH_SHORT).setAnimationMode(Snackbar.ANIMATION_MODE_SLIDE).show();
         } else {
-            if (sex_id == 0) category = spinnerCategories.getSelectedItemPosition();
-            if (service == 1) course = spinnerCourse.getSelectedItemPosition();
+            category = spinnerCategories.getSelectedItemPosition();
             mRealm.beginTransaction();
 
             model = mRealm.createObject(ModelOfPerson.class);
@@ -136,8 +177,6 @@ public class StartActivity extends AppCompatActivity {
             model.setWeight(Integer.parseInt(Objects.requireNonNull(editTextWeight.getText()).toString()));
 
             model.setCategory(category);
-            model.setCourse(course);
-            model.setService_id(service);
             model.setSex_id(sex_id);
             mRealm.commitTransaction();
 
@@ -147,4 +186,9 @@ public class StartActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mRealm.close();
+    }
 }

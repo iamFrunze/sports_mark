@@ -9,9 +9,11 @@ public class ModelOfPerson extends RealmObject {
     private int age;
     private int weight;
     private int sex_id;
-    private int service_id;
-    private int course;
     private int category;
+
+    private String date;
+    private String points;
+    private String mark;
 
     public String getName() {
         return name;
@@ -45,27 +47,35 @@ public class ModelOfPerson extends RealmObject {
         this.sex_id = sex_id;
     }
 
-    public int getService_id() {
-        return service_id;
-    }
-
-    public void setService_id(int service_id) {
-        this.service_id = service_id;
-    }
-
-    public int getCourse() {
-        return course;
-    }
-
-    public void setCourse(int course) {
-        this.course = course;
-    }
-
     public int getCategory() {
         return category;
     }
 
     public void setCategory(int category) {
         this.category = category;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getPoints() {
+        return points;
+    }
+
+    public void setPoints(String points) {
+        this.points = points;
+    }
+
+    public String getMark() {
+        return mark;
+    }
+
+    public void setMark(String mark) {
+        this.mark = mark;
     }
 }
