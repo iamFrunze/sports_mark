@@ -102,4 +102,6 @@
     <string name="name_exerc">Название упражнения:</string>
     <string name="points">Баллы</string>
     <string name="clean_btn">Очистить</string>
+    <string name="next_exam">Следующая сдача</string>
+    <string name="saveDate">Сохранить</string>
 </resources>

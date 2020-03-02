@@ -11,6 +11,8 @@ public class ModelOfPerson extends RealmObject {
     private int sex_id;
     private int category;
 
+    private String dateNextExam;
+
     private String date;
     private String points;
     private String mark;
@@ -59,6 +61,15 @@ public class ModelOfPerson extends RealmObject {
         this.agilityName = model.agilityName;
         this.agilityRes = model.agilityRes;
         this.agilityPoints = model.agilityPoints;
+        this.dateNextExam = model.dateNextExam;
+    }
+
+    public String getDateNextExam() {
+        return dateNextExam;
+    }
+
+    public void setDateNextExam(String dateNextExam) {
+        this.dateNextExam = dateNextExam;
     }
 
     public String getStrengthName() {

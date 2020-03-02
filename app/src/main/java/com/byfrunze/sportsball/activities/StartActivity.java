@@ -20,6 +20,7 @@ import com.byfrunze.sportsball.models.ModelOfPerson;
 import com.google.android.material.snackbar.Snackbar;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
+import java.util.Date;
 import java.util.Objects;
 
 import butterknife.BindView;
@@ -176,6 +177,7 @@ public class StartActivity extends AppCompatActivity {
             model.setAge(Integer.parseInt(Objects.requireNonNull(editTextAge.getText()).toString()));
             model.setWeight(Integer.parseInt(Objects.requireNonNull(editTextWeight.getText()).toString()));
 
+            model.setDateNextExam(new Date().toString());
             model.setCategory(category);
             model.setSex_id(sex_id);
             mRealm.commitTransaction();
