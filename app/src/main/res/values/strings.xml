@@ -98,7 +98,7 @@
     <string name="settings">Настройки "\n" профиля</string>
     <string name="settings_menu">Настройки</string>
     <string name="take_course">Выберите Ваш курс</string>
-    <string name="hello_to_calc">Здравствуй,</string>
+    <string name="hello_to_calc">Здравствуй, </string>
     <string name="name_exerc">Название упражнения:</string>
     <string name="points">Баллы</string>
     <string name="clean_btn">Очистить</string>

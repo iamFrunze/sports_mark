@@ -12,10 +12,13 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:screenOrientation="locked"
             android:name=".activities.NavActivity"
             android:label="@string/title_activity_nav"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".activities.StartActivity">
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.StartActivity"
+            android:screenOrientation="locked">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

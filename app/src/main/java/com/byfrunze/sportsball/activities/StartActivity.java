@@ -2,7 +2,9 @@ package com.byfrunze.sportsball.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -65,6 +67,8 @@ public class StartActivity extends AppCompatActivity {
     @BindView(R.id.frameCategories)
     LinearLayout frameCategories;
 
+    private static final String MY_SETTINGS = "my_settings";
+
     int sex_id = 0;
     int service = 0;
     int category = Integer.MAX_VALUE;
@@ -74,6 +78,7 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         ButterKnife.bind(this);
+        saveActivityPreferences();
         Realm.init(this);
 
         RealmConfiguration configuration = new RealmConfiguration.Builder()
@@ -192,5 +197,20 @@ public class StartActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         mRealm.close();
+    }
+
+    protected void saveActivityPreferences() {
+        SharedPreferences activityPreferences = getSharedPreferences(MY_SETTINGS, Activity.MODE_PRIVATE);
+        boolean hasVisited = activityPreferences.getBoolean("hasVisited", false);
+        if(!hasVisited){
+            SharedPreferences.Editor editor = activityPreferences.edit();
+            editor.putBoolean("hasVisited", true);
+            editor.apply();
+        }else{
+            Intent intent = new Intent(StartActivity.this, NavActivity.class);
+            startActivity(intent);
+        }
+
+
     }
 }
