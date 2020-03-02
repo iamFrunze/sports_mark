@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="name_war_skills">
-        <item>Упражнение N 48 марш-бросок на 5 км</item>
-        <item>Упражнение N 52 метание гранаты 600 г на дальность</item>
-        <item>Упражнение N 60 ныряние в длину</item>
+        <item>Упр. N 48 марш-бросок на 5 км</item>
+        <item>Упр. N 52 метание гранаты 600 г на дальность</item>
+        <item>Упр. N 60 ныряние в длину</item>
     </string-array>
 
     <string-array name="num48">

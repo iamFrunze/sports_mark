@@ -25,10 +25,10 @@
     <string name="WS">Военно-прикладные навыки:</string>
     <string name="mmetr">Милиметров</string>
     <string name="agility">Ловкость:</string>
-    <string name="mark">Оценка</string>
+    <string name="mark">Оценка:</string>
     <string name="itog">Рассчитать</string>
     <string name="exercises">Упражнение</string>
-    <string name="results">Результат</string>
+    <string name="results">Результат:</string>
     <string name="marks">баллов</string>
     <string name="your_results">Ваш результат</string>
     <string name="_400">400</string>
@@ -99,4 +99,7 @@
     <string name="settings_menu">Настройки</string>
     <string name="take_course">Выберите Ваш курс</string>
     <string name="hello_to_calc">Здравствуй,</string>
+    <string name="name_exerc">Название упражнения:</string>
+    <string name="points">Баллы</string>
+    <string name="clean_btn">Очистить</string>
 </resources>

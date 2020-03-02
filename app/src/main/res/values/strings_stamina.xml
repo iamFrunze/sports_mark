@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="name_stamina">
-        <item>Упражнение N 43 бег на 400 м</item>
-        <item>Упражнение N 45 бег на 1 км</item>
-        <item>Упражнение N 46 бег на 3 км</item>
-        <item>Упражнение N 47 бег на 5 км</item>
-        <item>Упражнение N 53 лыжная гонка на 5 км</item>
-        <item>Упражнение N 54 лыжная гонка на 10 км</item>
-        <item>Упражнение N 57б плавание на 500 м вольным стилем</item>
+        <item>Упр. N 43 бег на 400 м</item>
+        <item>Упр. N 45 бег на 1 км</item>
+        <item>Упр. N 46 бег на 3 км</item>
+        <item>Упр. N 47 бег на 5 км</item>
+        <item>Упр. N 53 лыжная гонка на 5 км</item>
+        <item>Упр. N 54 лыжная гонка на 10 км</item>
+        <item>Упр. N 57б плавание на 500 м вольным стилем</item>
     </string-array>
 
     <string-array name="name_stamina_women">
-        <item>Упражнение N 45 бег на 1 км</item>
-        <item>Упражнение N 53 лыжная гонка на 5 км</item>
-        <item>Упражнение N 57б плавание на 300 м</item>
+        <item>Упр. N 45 бег на 1 км</item>
+        <item>Упр. N 53 лыжная гонка на 5 км</item>
+        <item>Упр. N 57б плавание на 300 м</item>
     </string-array>
 
     <string-array name="num43">
