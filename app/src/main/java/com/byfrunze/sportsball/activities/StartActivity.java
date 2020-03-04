@@ -1,12 +1,10 @@
 package com.byfrunze.sportsball.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -17,20 +15,19 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.byfrunze.sportsball.R;
 import com.byfrunze.sportsball.models.ModelOfPerson;
 import com.google.android.material.snackbar.Snackbar;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
-import java.util.Date;
 import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
-import io.realm.RealmConfiguration.Builder;
-import io.realm.RealmResults;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -70,8 +67,11 @@ public class StartActivity extends AppCompatActivity {
     private static final String MY_SETTINGS = "my_settings";
 
     int sex_id = 0;
-    int service = 0;
     int category = Integer.MAX_VALUE;
+    private SharedPreferences.Editor editor = null;
+
+    private int reSex = 0;
+    private SharedPreferences saveData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +88,7 @@ public class StartActivity extends AppCompatActivity {
         Realm.setDefaultConfiguration(configuration);
         mRealm = Realm.getDefaultInstance();
 
+        saveData = getSharedPreferences("DateInfo", Context.MODE_PRIVATE);
 
         ArrayAdapter<CharSequence> adapterCategories =
                 ArrayAdapter.createFromResource(this, R.array.spinner_categories, R.layout.spinner_item);
@@ -112,12 +113,21 @@ public class StartActivity extends AppCompatActivity {
             switch (position) {
                 case 0:
                     sex_id = 20;    // 1 курс
+                    editor = saveData.edit();
+                    editor.putInt("course", 0);
+                    editor.apply();
                     break;
                 case 1:
                     sex_id = 21;    // 2 курс
+                    editor = saveData.edit();
+                    editor.putInt("course", 1);
+                    editor.apply();
                     break;
                 case 2:
                     sex_id = 22;    // 3 и старше курс
+                    editor = saveData.edit();
+                    editor.putInt("course", 2);
+                    editor.apply();
                     break;
                 default:
                     sex_id = 99;
@@ -153,8 +163,12 @@ public class StartActivity extends AppCompatActivity {
     };
 
     OnClickListener onClickRBSexIdMan = new OnClickListener() {
+
         @Override
         public void onClick(View v) {
+            editor = saveData.edit();
+            editor.putInt("reSex", 0);
+            editor.apply();
             if (RBContract.isChecked()) {
                 sex_id = 0;
                 frameCategories.setVisibility(View.VISIBLE);
@@ -165,6 +179,9 @@ public class StartActivity extends AppCompatActivity {
     OnClickListener onClickRBSexIdWoman = new OnClickListener() {
         @Override
         public void onClick(View v) {
+            editor = saveData.edit();
+            editor.putInt("reSex", 1);
+            editor.apply();
             frameCategories.setVisibility(View.GONE);
             if (RBContract.isChecked()) sex_id = 1;
         }
@@ -182,7 +199,6 @@ public class StartActivity extends AppCompatActivity {
             model.setAge(Integer.parseInt(Objects.requireNonNull(editTextAge.getText()).toString()));
             model.setWeight(Integer.parseInt(Objects.requireNonNull(editTextWeight.getText()).toString()));
 
-            model.setDateNextExam(new Date().toString());
             model.setCategory(category);
             model.setSex_id(sex_id);
             mRealm.commitTransaction();

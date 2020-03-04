@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.byfrunze.sportsball">
-
+    package="com.byfrunze.sportsball"
+    >
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8318454125734381~7541757878" />
+
         <activity
-            android:screenOrientation="locked"
             android:name=".activities.NavActivity"
             android:label="@string/title_activity_nav"
+            android:screenOrientation="locked"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.StartActivity"
+        <activity
+            android:name=".activities.StartActivity"
             android:screenOrientation="locked">
 
             <intent-filter>

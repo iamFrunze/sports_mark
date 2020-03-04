@@ -8,14 +8,6 @@ public class ModelOfMark {
     private String ws;
     private String agility;
 
-    public ModelOfMark(String strength, String speed, String stamina, String ws, String agility) {
-        this.strength = strength;
-        this.speed = speed;
-        this.stamina = stamina;
-        this.ws = ws;
-        this.agility = agility;
-    }
-
     public ModelOfMark() {
     }
 
