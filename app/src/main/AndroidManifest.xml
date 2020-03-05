@@ -14,7 +14,7 @@
         tools:ignore="GoogleAppIndexingWarning">
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-8318454125734381~7541757878" />
+            android:value="ca-app-pub-8318454125734381~9825140431" />
 
         <activity
             android:name=".activities.NavActivity"
