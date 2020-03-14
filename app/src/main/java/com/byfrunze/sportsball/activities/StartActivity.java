@@ -26,6 +26,7 @@ import com.byfrunze.sportsball.R;
 import com.byfrunze.sportsball.models.ModelOfPerson;
 import com.google.android.material.snackbar.Snackbar;
 import com.rengwuxian.materialedittext.MaterialEditText;
+import com.suke.widget.SwitchButton;
 
 import java.util.Objects;
 
@@ -50,26 +51,17 @@ public class StartActivity extends AppCompatActivity {
     Realm mRealm;
     ModelOfPerson model;
 
-    @BindView(R.id.RGSexId)
-    RadioGroup RGSexId;
-    @BindView(R.id.sexid_man)
-    RadioButton sexid_man;
-    @BindView(R.id.sexid_woman)
-    RadioButton sexid_woman;
-
-    @BindView(R.id.RGService)
-    RadioGroup RGService;
-    @BindView(R.id.RBContract)
-    RadioButton RBContract;
-    @BindView(R.id.RBCadet)
-    RadioButton RBCadet;
-
     @BindView(R.id.frameCourse)
     LinearLayout frameCourse;
     @BindView(R.id.frameCategories)
     LinearLayout frameCategories;
     @BindView(R.id.btnInfo)
-   ImageView btnInfo;
+    ImageView btnInfo;
+
+    @BindView(R.id.switcherService)
+    SwitchButton switchService;
+    @BindView(R.id.switcherSex)
+    SwitchButton switcherSex;
 
     private static final String MY_SETTINGS = "my_settings";
 
@@ -80,6 +72,7 @@ public class StartActivity extends AppCompatActivity {
     private int reSex = 0;
     private SharedPreferences saveData;
     Context context = this;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -108,10 +101,9 @@ public class StartActivity extends AppCompatActivity {
         spinnerCourse.setAdapter(adapterCourse);
         spinnerCourse.setOnItemSelectedListener(OnSelectCourse);
 
-        RBCadet.setOnClickListener(onClickRBCadet);
-        RBContract.setOnClickListener(onClickRBService);
-        sexid_man.setOnClickListener(onClickRBSexIdMan);
-        sexid_woman.setOnClickListener(onClickRBSexIdWoman);
+
+        switcherSex.setOnCheckedChangeListener(onCheckedSexListener);
+        switchService.setOnCheckedChangeListener(onCheckedServiceListener);
 
         btnInfo.setOnClickListener(v -> {
 
@@ -159,51 +151,46 @@ public class StartActivity extends AppCompatActivity {
         }
     };
 
-    OnClickListener onClickRBService = new OnClickListener() {
+    SwitchButton.OnCheckedChangeListener onCheckedServiceListener = new SwitchButton.OnCheckedChangeListener() {
         @Override
-        public void onClick(View v) {
-            if (sexid_woman.isChecked()) {
-                sex_id = 1;
-            } else if (sexid_man.isChecked()) {
-                sex_id = 0;
-                frameCategories.setVisibility(View.VISIBLE);
+        public void onCheckedChanged(SwitchButton view, boolean isChecked) {
+            if (!isChecked) {
+                if (switcherSex.isChecked()) {
+                    sex_id = 1;
+                } else {
+                    sex_id = 0;
+                    frameCategories.setVisibility(View.VISIBLE);
+                }
+                frameCourse.setVisibility(View.GONE);
+            } else {
+                sex_id = 20;
+                frameCourse.setVisibility(View.VISIBLE);
+                frameCategories.setVisibility(View.GONE);
             }
-            frameCourse.setVisibility(View.GONE);
-        }
-    };
-    OnClickListener onClickRBCadet = new OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            sex_id = 20;
-            frameCourse.setVisibility(View.VISIBLE);
-            frameCategories.setVisibility(View.GONE);
         }
     };
 
-    OnClickListener onClickRBSexIdMan = new OnClickListener() {
-
+    SwitchButton.OnCheckedChangeListener onCheckedSexListener = new SwitchButton.OnCheckedChangeListener() {
         @Override
-        public void onClick(View v) {
-            editor = saveData.edit();
-            editor.putInt("reSex", 0);
-            editor.apply();
-            if (RBContract.isChecked()) {
-                sex_id = 0;
-                frameCategories.setVisibility(View.VISIBLE);
-            } else frameCategories.setVisibility(View.GONE);
-
+        public void onCheckedChanged(SwitchButton view, boolean isChecked) {
+            if(!isChecked){
+                editor = saveData.edit();
+                editor.putInt("reSex", 0);
+                editor.apply();
+                if (!switchService.isChecked()) {
+                    sex_id = 0;
+                    frameCategories.setVisibility(View.VISIBLE);
+                } else frameCategories.setVisibility(View.GONE);
+            }else{
+                editor = saveData.edit();
+                editor.putInt("reSex", 1);
+                editor.apply();
+                frameCategories.setVisibility(View.GONE);
+                if (!switchService.isChecked()) sex_id = 1;
+            }
         }
     };
-    OnClickListener onClickRBSexIdWoman = new OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            editor = saveData.edit();
-            editor.putInt("reSex", 1);
-            editor.apply();
-            frameCategories.setVisibility(View.GONE);
-            if (RBContract.isChecked()) sex_id = 1;
-        }
-    };
+
 
     public void onClickContinue(View view) {
         if (editTextName.length() < 2 || editTextAge.length() < 2 || editTextWeight.length() < 2) {
