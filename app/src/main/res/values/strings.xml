@@ -70,6 +70,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Главная</string>
+    <string name="menu_nfp">НФП</string>
     <string name="menu_calculator">Калькулятор баллов</string>
     <string name="menu_calculator_somebody">КБ для нового пользователя</string>
     <string name="menu_history">История</string>
@@ -95,7 +96,7 @@
     <string name="method">Методика</string>
     <string name="calendar">Календарь</string>
     <string name="free_money">Помоги проекту - посмотри рекламу!</string>
-    <string name="settings">Настройки "\n" профиля</string>
+    <string name="settings">Настройки</string>
     <string name="settings_menu">Настройки</string>
     <string name="take_course">Выберите Ваш курс</string>
     <string name="hello_to_calc">Здравствуй, </string>
@@ -105,4 +106,32 @@
     <string name="next_exam">Следующая сдача</string>
     <string name="saveDate">Сохранить</string>
     <string name="banner_ads">ca-app-pub-8318454125734381/4340879467</string>
+
+    <string name="cat_one_title">Категория № 1: </string>
+    <string name="cat_one_desc">Военнослужащие подразделений специального
+        назначения, разведывательных, воздушно-десантных, десантно-штурмовых и морской пехоты;
+    </string>
+
+    <string name="cat_two_title">Категория № 2: </string>
+    <string name="cat_two_desc">Личный состав основных подразделений и подразделений боевого обеспечения (кроме указанных в категории N 1)
+        воинских частей видов (родов войск) Вооруженных Сил, управления соединений, воинских частей; слушатели и курсанты вузов;</string>
+
+    <string name="cat_three_title">Категория № 3: </string>
+    <string name="cat_three_desc">Военнослужащие подразделений материального, технического и медицинского обеспечения, ремонта и обслуживания,
+        соединений (бригад) надводных кораблей и подводных лодок, военных оркестров, переменный состав учебных воинских частей (военнослужащие по контракту - курсанты).
+        Военнослужащие, проходящие военную службу в органах военного управления (от управления объединения и выше), в организациях Вооруженных Сил.</string>
+    <string name="promo">ЗДЕСЬ ДОЛЖНА БЫТЬ РЕКЛАМА</string>
+    <string name="title_activity_main_nav">MainNavActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="feed">Новости</string>
+    <string name="music">Плеер</string>
+    <string name="search">Поиск</string>
+    <string name="sport">Спорт</string>
 </resources>

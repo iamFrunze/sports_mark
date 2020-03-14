@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6E227E</color>
-    <color name="colorPrimaryDark">#5A016D</color>
-    <color name="colorAccent">#DB0058</color>
+    <color name="colorPrimary">#56786F</color>
+    <color name="colorPrimaryDark">#2D3347</color>
+    <color name="colorAccent">#32252B</color>
     <color name="white">#fff</color>
     <color name="blue">#0000ff</color>
     <color name="btn_start">#6600ff</color>
+
+    <color name="nav_item">#519896</color>
+    <color name="app_primary">#DB0058</color>
+    <color name="app_primary_pressed">#6E227E</color>
+    <color name="app_ripple">#0000ff</color>
 </resources>

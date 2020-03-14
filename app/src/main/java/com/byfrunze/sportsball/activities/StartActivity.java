@@ -1,7 +1,9 @@
 package com.byfrunze.sportsball.activities;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -10,6 +12,9 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -63,6 +68,8 @@ public class StartActivity extends AppCompatActivity {
     LinearLayout frameCourse;
     @BindView(R.id.frameCategories)
     LinearLayout frameCategories;
+    @BindView(R.id.btnInfo)
+   ImageView btnInfo;
 
     private static final String MY_SETTINGS = "my_settings";
 
@@ -72,13 +79,12 @@ public class StartActivity extends AppCompatActivity {
 
     private int reSex = 0;
     private SharedPreferences saveData;
-
+    Context context = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         ButterKnife.bind(this);
-        saveActivityPreferences();
         Realm.init(this);
 
         RealmConfiguration configuration = new RealmConfiguration.Builder()
@@ -86,6 +92,7 @@ public class StartActivity extends AppCompatActivity {
                 .schemaVersion(2)
                 .build();
         Realm.setDefaultConfiguration(configuration);
+        ActivitySave();
         mRealm = Realm.getDefaultInstance();
 
         saveData = getSharedPreferences("DateInfo", Context.MODE_PRIVATE);
@@ -105,6 +112,17 @@ public class StartActivity extends AppCompatActivity {
         RBContract.setOnClickListener(onClickRBService);
         sexid_man.setOnClickListener(onClickRBSexIdMan);
         sexid_woman.setOnClickListener(onClickRBSexIdWoman);
+
+        btnInfo.setOnClickListener(v -> {
+
+            AlertDialog.Builder dialog = new AlertDialog.Builder(context);
+            View view = getLayoutInflater().inflate(R.layout.dialog_fragment_info, null);
+            dialog.setView(view);
+            dialog.setNeutralButton("Okey", (dialog1, which) -> dialog1.dismiss());
+            dialog.create();
+            dialog.show();
+
+        });
     }
 
     private OnItemSelectedListener OnSelectCourse = new OnItemSelectedListener() {
@@ -202,8 +220,9 @@ public class StartActivity extends AppCompatActivity {
             model.setCategory(category);
             model.setSex_id(sex_id);
             mRealm.commitTransaction();
+            saveActivityPreferences();
 
-            Intent intent = new Intent(this, NavActivity.class);
+            Intent intent = new Intent(this, MainNavActivity.class);
             startActivity(intent);
         }
 
@@ -218,15 +237,22 @@ public class StartActivity extends AppCompatActivity {
     protected void saveActivityPreferences() {
         SharedPreferences activityPreferences = getSharedPreferences(MY_SETTINGS, Activity.MODE_PRIVATE);
         boolean hasVisited = activityPreferences.getBoolean("hasVisited", false);
-        if(!hasVisited){
+        if (!hasVisited) {
             SharedPreferences.Editor editor = activityPreferences.edit();
             editor.putBoolean("hasVisited", true);
             editor.apply();
-        }else{
-            Intent intent = new Intent(StartActivity.this, NavActivity.class);
+        } else {
+            Intent intent = new Intent(StartActivity.this, MainNavActivity.class);
             startActivity(intent);
         }
+    }
 
-
+    protected void ActivitySave() {
+        SharedPreferences activityPreferences = getSharedPreferences(MY_SETTINGS, Activity.MODE_PRIVATE);
+        boolean hasVisited = activityPreferences.getBoolean("hasVisited", false);
+        if (hasVisited) {
+            Intent intent = new Intent(StartActivity.this, MainNavActivity.class);
+            startActivity(intent);
+        }
     }
 }
