@@ -57,5 +57,6 @@ dependencies {
     //gson
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    implementation 'org.jsoup:jsoup:1.13.1'
 
 }

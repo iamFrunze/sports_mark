@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.StartActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+
+            android:paddingBottom="80dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/bck_elements">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/editTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:hint="@string/your_name"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    app:met_baseColor="@color/m_text_color"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelText="@string/your_name"
+                    app:met_helperTextColor="@color/m_text_color"
+                    app:met_maxCharacters="20"
+                    app:met_minCharacters="2"
+                    app:met_errorColor="@color/underline_color"
+                    app:met_primaryColor="@color/m_text_color"
+                    app:met_singleLineEllipsis="true"
+                    app:met_textColor="@color/m_text_color"
+                    app:met_textColorHint="@color/m_text_color" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bck_elements"
+                android:padding="4dp"
+                android:layout_margin="4dp"
+                android:text="@string/_sex"
+                android:textAlignment="center"
+                android:textColor="@color/m_text_color"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="4dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/textViewManSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bck_elements"
+                    android:padding="4dp"
+                    android:text="@string/man"
+                    android:textColor="@color/m_text_color"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/switcherSex"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switcherSex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/textViewWomanSwitch"
+                    app:layout_constraintStart_toEndOf="@id/textViewManSwitch"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sb_checked_color="#ffc0cb"
+                    app:sb_uncheck_color="#0000CD"
+                    app:sb_uncheckcircle_color="#0000CD" />
+
+                <TextView
+                    android:id="@+id/textViewWomanSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bck_elements"
+                    android:padding="4dp"
+                    android:text="@string/woman"
+                    android:textColor="@color/m_text_color"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/switcherSex"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/frameCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bck_elements"
+                android:orientation="horizontal"
+                android:layout_margin="4dp"
+                android:weightSum="5">
+
+                <ImageView
+                    android:id="@+id/btnInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_info_white_36dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/take_categories"
+                    android:textColor="@color/m_text_color" />
+
+                <Spinner
+                    android:id="@+id/spinner_categories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="2" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bck_elements"
+                android:padding="4dp"
+                android:layout_margin="4dp"
+                android:text="@string/contract"
+                android:textAlignment="center"
+                android:textColor="@color/m_text_color"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="4dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/textViewServiceSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bck_elements"
+                    android:padding="4dp"
+                    android:text="@string/on_contract"
+                    android:textColor="@color/m_text_color"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/switcherService"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switcherService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/textViewCadetSwitch"
+                    app:layout_constraintStart_toEndOf="@id/textViewServiceSwitch"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sb_checked_color="#FDE910"
+                    app:sb_uncheck_color="#78866B"
+                    app:sb_uncheckcircle_color="#78866B" />
+
+                <TextView
+                    android:id="@+id/textViewCadetSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bck_elements"
+                    android:padding="4dp"
+                    android:text="@string/cadet"
+                    android:textColor="@color/m_text_color"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/switcherService"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:id="@+id/frameCourse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bck_elements"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:layout_margin="4dp"
+                android:visibility="gone">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/take_course"
+                    android:textAlignment="center"
+                    android:textColor="@color/m_text_color" />
+
+                <Spinner
+                    android:id="@+id/spinner_course"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bck_elements"
+                android:layout_margin="8dp"
+                android:padding="4dp">
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/editTextAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/age"
+                    android:inputType="numberDecimal"
+                    android:maxLength="3"
+                    app:met_baseColor="@color/m_text_color"
+                    app:met_floatingLabel="highlight"
+                    app:met_helperTextColor="@color/m_text_color"
+                    app:met_errorColor="@color/underline_color"
+                    app:met_maxCharacters="3"
+                    app:met_minCharacters="2"
+                    app:met_primaryColor="@color/m_text_color"
+                    app:met_singleLineEllipsis="true"
+                    app:met_textColor="@color/m_text_color"
+                    app:met_textColorHint="@color/m_text_color" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bck_elements"
+                android:layout_margin="8dp"
+                android:padding="4dp">
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/editTextWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/weight"
+                    android:inputType="numberDecimal"
+                    android:maxLength="3"
+                    app:met_baseColor="@color/white"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelText="@string/weight"
+                    app:met_helperTextColor="@color/m_text_color"
+                    app:met_maxCharacters="3"
+                    app:met_minCharacters="2"
+                    app:met_errorColor="@color/underline_color"
+                    app:met_primaryColor="@color/m_text_color"
+                    app:met_singleLineEllipsis="true"
+                    app:met_textColor="@color/m_text_color"
+                    app:met_textColorHint="@color/m_text_color" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/saveDate" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/action_feed">
+
+    <fragment
+        android:id="@+id/action_calculator"
+        android:name="com.byfrunze.sportsball.activities.ui.calculator.CalculatorFragment"
+        android:label="@string/menu_calculator"
+        tools:layout="@layout/fragment_calculator" />
+
+    <fragment
+        android:id="@+id/nav_calculator_add"
+        android:name="com.byfrunze.sportsball.activities.ui.addcalculator.AddCalculatorFragment"
+        android:label="@string/menu_calculator_somebody"
+        tools:layout="@layout/fragment_calendar" />
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.byfrunze.sportsball.activities.ui.history.HistoryFragment"
+        android:label="@string/menu_history"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/nav_calendar"
+        android:name="com.byfrunze.sportsball.activities.ui.calendar.CalendarFragment"
+        android:label="@string/menu_calendar"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/action_settings"
+        android:name="com.byfrunze.sportsball.activities.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_add_calculator" />
+    <fragment
+        android:id="@+id/action_music"
+        android:name="com.byfrunze.sportsball.activities.ui.music.MusicFragment"
+        android:label="MusicFragment" />
+    <fragment
+        android:id="@+id/action_feed"
+        android:name="com.byfrunze.sportsball.activities.ui.feed.FeedFragment"
+        android:label="FeedFragment" >
+        <action
+            android:id="@+id/action_action_feed_to_webInfo"
+            app:destination="@id/webInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/action_nfp"
+        android:name="com.byfrunze.sportsball.activities.ui.nfp.NFPFragment"
+        android:label="NFPFragment" >
+        <action
+            android:id="@+id/action_NFPFragment_to_nav_calendar"
+            app:destination="@id/nav_calendar" />
+        <action
+            android:id="@+id/action_NFPFragment_to_nav_history"
+            app:destination="@id/nav_history" />
+        <action
+            android:id="@+id/action_NFPFragment_to_nav_calculator_add"
+            app:destination="@id/nav_calculator_add" />
+        <action
+            android:id="@+id/action_NFPFragment_to_action_calculator"
+            app:destination="@id/action_calculator" />
+    </fragment>
+    <fragment
+        android:id="@+id/webInfo"
+        android:name="com.byfrunze.sportsball.activities.ui.webnews.WebInfo"
+        android:label="WebInfo" />
+</navigation>

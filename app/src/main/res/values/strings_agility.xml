@@ -3,10 +3,10 @@
     <string-array name="name_agility">
         <item>Оценка за упражнение на ловкость</item>
         <item>Упр. N 51 тройной прыжок с места</item>
+        <item>Упр. № 22 Передвижения по узкой опоре (бревну)</item>
     </string-array>
 
 
-    
     <string-array name="num51a">
         <item>850</item>
         <item>844</item>
@@ -207,5 +207,104 @@
         <item>2</item>
         <item>2</item>
         <item>2</item>
+    </string-array>
+
+    <string-array name="num22">
+<item>9.0</item>
+<item>9.1</item>
+<item>9.3</item>
+<item>9.4</item>
+<item>9.5</item>
+<item>9.6</item>
+<item>9.7</item>
+<item>9.8</item>
+<item>9.9</item>
+<item>10.0</item>
+<item>10.1</item>
+<item>10.3</item>
+<item>10.4</item>
+<item>10.5</item>
+<item>10.6</item>
+<item>10.7</item>
+<item>10.8</item>
+<item>10.9</item>
+<item>11.0</item>
+<item>11.1</item>
+<item>11.3</item>
+<item>11.4</item>
+<item>11.5</item>
+<item>11.6</item>
+<item>11.7</item>
+<item>11.8</item>
+<item>11.9</item>
+<item>12.0</item>
+<item>12.1</item>
+<item>12.3</item>
+<item>12.4</item>
+<item>12.5</item>
+<item>12.7</item>
+<item>12.8</item>
+<item>12.9</item>
+<item>13.0</item>
+<item>13.1</item>
+<item>13.3</item>
+<item>13.4</item>
+<item>13.5</item>
+<item>13.6</item>
+<item>13.7</item>
+<item>13.8</item>
+<item>13.9</item>
+<item>14.0</item>
+<item>14.4</item>
+<item>14.5</item>
+<item>14.6</item>
+<item>14.7</item>
+<item>14.8</item>
+<item>14.9</item>
+<item>15.0</item>
+<item>15.1</item>
+<item>15.3</item>
+<item>15.4</item>
+<item>15.5</item>
+<item>15.6</item>
+<item>15.7</item>
+<item>15.8</item>
+<item>15.9</item>
+<item>16.0</item>
+<item>16.1</item>
+<item>16.3</item>
+<item>16.4</item>
+<item>16.5</item>
+<item>16.6</item>
+<item>16.7</item>
+<item>16.8</item>
+<item>16.9</item>
+<item>17.0</item>
+<item>17.1</item>
+<item>17.3</item>
+<item>17.4</item>
+<item>17.5</item>
+<item>17.6</item>
+<item>17.7</item>
+<item>17.7</item>
+<item>17.8</item>
+<item>17.8</item>
+<item>17.9</item>
+<item>17.9</item>
+<item>18.0</item>
+<item>18.0</item>
+<item>18.1</item>
+<item>18.1</item>
+<item>18.1</item>
+<item>18.2</item>
+<item>18.2</item>
+<item>18.2</item>
+<item>18.3</item>
+<item>18.3</item>
+<item>18.3</item>
+<item>18.4</item>
+<item>18.4</item>
+<item>18.4</item>
+
     </string-array>
 </resources>

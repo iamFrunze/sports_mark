@@ -117,6 +117,40 @@ public class StartActivity extends AppCompatActivity {
         });
     }
 
+    public void onClickSetMan(View view) {
+        switcherSex.setChecked(false);
+        editor = saveData.edit();
+        editor.putInt("reSex", 0);
+        editor.apply();
+        if (!switchService.isChecked()) {
+            sex_id = 0;
+            frameCategories.setVisibility(View.VISIBLE);
+        } else frameCategories.setVisibility(View.GONE);
+    }
+    public void onClickSetWoman(View view) {
+        switcherSex.setChecked(true);
+        editor = saveData.edit();
+        editor.putInt("reSex", 1);
+        editor.apply();
+        frameCategories.setVisibility(View.GONE);
+        if (!switchService.isChecked()) sex_id = 1;
+    }
+    public void onClickSetService(View view) {
+        switchService.setChecked(false);
+        if (switcherSex.isChecked()) {
+            sex_id = 1;
+        } else {
+            sex_id = 0;
+            frameCategories.setVisibility(View.VISIBLE);
+        }
+        frameCourse.setVisibility(View.GONE);
+    }
+    public void onClickSetCadet(View view) {
+        switchService.setChecked(true);
+        sex_id = 20;
+        frameCourse.setVisibility(View.VISIBLE);
+        frameCategories.setVisibility(View.GONE);
+    }
     private OnItemSelectedListener OnSelectCourse = new OnItemSelectedListener() {
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -242,4 +276,7 @@ public class StartActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+
+
 }
