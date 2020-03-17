@@ -53,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:padding="4dp"
                 android:background="@drawable/bck_elements"
                 android:orientation="vertical">
 
@@ -101,8 +102,8 @@
                 android:id="@+id/cardViewStrength"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#bFffffff"
                 android:layout_margin="8dp"
+                android:backgroundTint="@color/bcg_card"
                 app:cardCornerRadius="8dp">
 
                 <LinearLayout
@@ -172,7 +173,7 @@
                 android:id="@+id/cardViewSpeed"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#bFffffff"
+                android:backgroundTint="@color/bcg_card"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="8dp">
 
@@ -182,6 +183,7 @@
                     android:layout_margin="8dp"
                     android:baselineAligned="false"
                     android:gravity="center"
+
                     android:orientation="vertical">
 
                     <TextView
@@ -242,7 +244,7 @@
                 android:id="@+id/cardViewStamina"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#bFffffff"
+                android:backgroundTint="@color/bcg_card"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="8dp">
 
@@ -312,7 +314,7 @@
                 android:id="@+id/cardViewWS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#bFffffff"
+                android:backgroundTint="@color/bcg_card"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="8dp">
 
@@ -382,7 +384,7 @@
                 android:id="@+id/cardViewAgility"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#bFffffff"
+                android:backgroundTint="@color/bcg_card"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="8dp">
 

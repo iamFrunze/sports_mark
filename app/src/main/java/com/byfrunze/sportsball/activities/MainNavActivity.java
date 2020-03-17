@@ -5,11 +5,11 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.widget.Toast;
 
 import com.byfrunze.sportsball.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -50,9 +50,21 @@ public class MainNavActivity extends AppCompatActivity {
             builder.show();
         }
 
-
-
     }
+    private int i = 0;
+
+    @Override
+    public void onBackPressed() {
+        ++i;
+        if (i == 1) {
+            super.onBackPressed();
+        }else if(i == 2){
+            finish();
+        }
+        Toast.makeText(this, "Double Back to exit", Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(() -> i = 0, 2000);
+    }
+
     private boolean web_update(){
         String package_name = getPackageName();
         try {

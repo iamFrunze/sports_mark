@@ -319,7 +319,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:backgroundTint="#bFffffff"
+                android:backgroundTint="@color/bcg_card"
                 app:cardCornerRadius="8dp">
 
                 <LinearLayout
@@ -390,7 +390,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:backgroundTint="#bFffffff"
+                android:backgroundTint="@color/bcg_card"
                 app:cardCornerRadius="8dp">
 
                 <LinearLayout
@@ -460,7 +460,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:backgroundTint="#bFffffff"
+                android:backgroundTint="@color/bcg_card"
                 app:cardCornerRadius="8dp">
 
                 <LinearLayout
@@ -530,7 +530,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:backgroundTint="#bFffffff"
+                android:backgroundTint="@color/bcg_card"
                 app:cardCornerRadius="8dp">
 
                 <LinearLayout
@@ -600,7 +600,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:backgroundTint="#bFffffff"
+                android:backgroundTint="@color/bcg_card"
                 app:cardCornerRadius="8dp">
 
                 <LinearLayout

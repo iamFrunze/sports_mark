@@ -2,23 +2,19 @@ package com.byfrunze.sportsball.activities;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,6 +24,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.rengwuxian.materialedittext.MaterialEditText;
 import com.suke.widget.SwitchButton;
 
+import java.util.Calendar;
 import java.util.Objects;
 
 import butterknife.BindView;
@@ -39,8 +36,6 @@ public class StartActivity extends AppCompatActivity {
 
     @BindView(R.id.editTextName)
     MaterialEditText editTextName;
-    @BindView(R.id.editTextAge)
-    MaterialEditText editTextAge;
     @BindView(R.id.editTextWeight)
     MaterialEditText editTextWeight;
     @BindView(R.id.spinner_categories)
@@ -63,13 +58,15 @@ public class StartActivity extends AppCompatActivity {
     @BindView(R.id.switcherSex)
     SwitchButton switcherSex;
 
+    @BindView(R.id.tvDate)
+    TextView tvDate;
+
     private static final String MY_SETTINGS = "my_settings";
 
     int sex_id = 0;
     int category = Integer.MAX_VALUE;
     private SharedPreferences.Editor editor = null;
 
-    private int reSex = 0;
     private SharedPreferences saveData;
     Context context = this;
 
@@ -115,6 +112,7 @@ public class StartActivity extends AppCompatActivity {
             dialog.show();
 
         });
+        tvDate.setOnClickListener(v -> callDatePicker());
     }
 
     public void onClickSetMan(View view) {
@@ -227,7 +225,7 @@ public class StartActivity extends AppCompatActivity {
 
 
     public void onClickContinue(View view) {
-        if (editTextName.length() < 2 || editTextAge.length() < 2 || editTextWeight.length() < 2) {
+        if (editTextName.length() < 2 || mAge < 10 || editTextWeight.length() < 2) {
             Snackbar.make(view, "Заполните данные", Snackbar.LENGTH_SHORT).setAnimationMode(Snackbar.ANIMATION_MODE_SLIDE).show();
         } else {
             category = spinnerCategories.getSelectedItemPosition();
@@ -235,7 +233,7 @@ public class StartActivity extends AppCompatActivity {
 
             model = mRealm.createObject(ModelOfPerson.class);
             model.setName(Objects.requireNonNull(editTextName.getText()).toString());
-            model.setAge(Integer.parseInt(Objects.requireNonNull(editTextAge.getText()).toString()));
+            model.setAge(mAge);
             model.setWeight(Integer.parseInt(Objects.requireNonNull(editTextWeight.getText()).toString()));
 
             model.setCategory(category);
@@ -265,6 +263,7 @@ public class StartActivity extends AppCompatActivity {
         } else {
             Intent intent = new Intent(StartActivity.this, MainNavActivity.class);
             startActivity(intent);
+            finish();
         }
     }
 
@@ -274,9 +273,45 @@ public class StartActivity extends AppCompatActivity {
         if (hasVisited) {
             Intent intent = new Intent(StartActivity.this, MainNavActivity.class);
             startActivity(intent);
+            finish();
         }
     }
 
+    private int currentYear = 0;
+    private int currentMonth = 0;
+    private int currentDay = 0;
+    private int bdYear = 0;
+    private int bdMonth = 0;
+    private int bdDay = 0;
+    private int mAge = 0;
 
+    private void callDatePicker() {
+        // получаем текущую дату
+        final Calendar cal = Calendar.getInstance();
+        currentYear = cal.get(Calendar.YEAR);
+        currentMonth = cal.get(Calendar.MONTH);
+        currentDay = cal.get(Calendar.DAY_OF_MONTH);
+
+        // инициализируем диалог выбора даты текущими значениями
+        DatePickerDialog datePickerDialog = new DatePickerDialog(context,
+                (view, year, monthOfYear, dayOfMonth) -> {
+                    String editTextDateParam = dayOfMonth + "." + (monthOfYear + 1) + "." + year;
+                    bdYear = year;
+                    bdDay = dayOfMonth;
+                    bdMonth = monthOfYear;
+                    tvDate.setText(editTextDateParam);
+                    if ((currentDay <= bdDay) && (currentMonth <= bdMonth)) {
+                        mAge = currentYear - bdYear - 1;
+                    } else {
+                        mAge = currentYear - bdYear;
+                    }
+
+                },  currentYear,  currentMonth, currentDay);
+
+
+        datePickerDialog.getDatePicker().setLayoutMode(1);
+        datePickerDialog.show();
+
+    }
 
 }

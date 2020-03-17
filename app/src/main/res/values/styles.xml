@@ -6,6 +6,26 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:datePickerStyle">@style/mSpinnerDatePicker</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="spinnerStyle">@style/mSpinner</item>
+    </style>
+
+
+    <style name="AppTheme1" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="spinnerStyle">@style/mSpinner</item>
+    </style>
+    <style name="mSpinnerDatePicker" parent="Widget.MaterialComponents.MaterialCalendar">
+        <item name="android:datePickerMode">spinner</item>
+    </style>
+
+    <style name="mSpinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:popupBackground">@color/bcg_card</item>
     </style>
 
 

@@ -1,10 +1,6 @@
 package com.byfrunze.sportsball.activities.ui.webnews;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,4 +38,5 @@ public class WebInfo extends Fragment {
         webView.loadUrl(getArguments().getString("URL"));
         return view;
     }
+
 }

@@ -39,10 +39,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_margin="4dp"
                 android:background="@drawable/bck_elements"
                 android:gravity="center"
                 android:padding="4dp"
-                android:layout_margin="4dp"
                 android:text="@string/description_hello"
                 android:textAlignment="center"
                 android:textColor="@color/m_text_color"
@@ -62,15 +62,15 @@
                     android:hint="@string/your_name"
                     android:inputType="text"
                     android:maxLength="20"
+                    app:met_baseColor="@color/m_text_color"
+                    app:met_errorColor="@color/underline_color"
                     app:met_floatingLabel="highlight"
                     app:met_floatingLabelText="@string/your_name"
+                    app:met_helperTextColor="@color/m_text_color"
                     app:met_maxCharacters="20"
                     app:met_minCharacters="2"
-                    app:met_singleLineEllipsis="true"
-                    app:met_baseColor="@color/m_text_color"
-                    app:met_helperTextColor="@color/m_text_color"
-                    app:met_errorColor="@color/underline_color"
                     app:met_primaryColor="@color/m_text_color"
+                    app:met_singleLineEllipsis="true"
                     app:met_textColor="@color/m_text_color"
                     app:met_textColorHint="@color/m_text_color" />
             </LinearLayout>
@@ -79,9 +79,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_margin="4dp"
                 android:background="@drawable/bck_elements"
                 android:padding="4dp"
-                android:layout_margin="4dp"
                 android:text="@string/_sex"
                 android:textAlignment="center"
                 android:textColor="@color/m_text_color"
@@ -90,8 +90,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_margin="4dp"
+                android:orientation="horizontal"
                 android:weightSum="3">
 
                 <TextView
@@ -99,12 +99,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="onClickSetMan"
                     android:background="@drawable/bck_elements"
+                    android:onClick="onClickSetMan"
                     android:padding="4dp"
-                    android:textSize="16sp"
                     android:text="@string/man"
                     android:textColor="@color/m_text_color"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/switcherSex"
                     app:layout_constraintStart_toStartOf="parent"
@@ -131,11 +131,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/bck_elements"
-                    android:padding="4dp"
-                    android:textSize="16sp"
-                    android:text="@string/woman"
                     android:onClick="onClickSetWoman"
+                    android:padding="4dp"
+                    android:text="@string/woman"
                     android:textColor="@color/m_text_color"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/switcherSex"
@@ -146,9 +146,9 @@
                 android:id="@+id/frameCategories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="4dp"
                 android:background="@drawable/bck_elements"
                 android:orientation="horizontal"
-                android:layout_margin="4dp"
                 android:weightSum="5">
 
                 <ImageView
@@ -179,9 +179,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_margin="4dp"
                 android:background="@drawable/bck_elements"
                 android:padding="4dp"
-                android:layout_margin="4dp"
                 android:text="@string/contract"
                 android:textAlignment="center"
                 android:textColor="@color/m_text_color"
@@ -190,8 +190,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_margin="4dp"
+                android:orientation="horizontal"
                 android:weightSum="3">
 
                 <TextView
@@ -200,11 +200,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/bck_elements"
+                    android:onClick="onClickSetService"
                     android:padding="4dp"
-                    android:textSize="16sp"
                     android:text="@string/on_contract"
                     android:textColor="@color/m_text_color"
-                    android:onClick="onClickSetService"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/switcherService"
                     app:layout_constraintStart_toStartOf="parent"
@@ -231,11 +231,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/bck_elements"
-                    android:padding="4dp"
                     android:onClick="onClickSetCadet"
+                    android:padding="4dp"
                     android:text="@string/cadet"
-                    android:textSize="16sp"
                     android:textColor="@color/m_text_color"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/switcherService"
@@ -248,10 +248,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_margin="4dp"
                 android:background="@drawable/bck_elements"
                 android:orientation="horizontal"
                 android:padding="4dp"
-                android:layout_margin="4dp"
                 android:visibility="gone">
 
                 <TextView
@@ -272,34 +272,28 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bck_elements"
                 android:layout_margin="8dp"
+                android:background="@drawable/bck_elements"
                 android:padding="4dp">
 
-                <com.rengwuxian.materialedittext.MaterialEditText
-                    android:id="@+id/editTextAge"
+                <TextView
+                    android:id="@+id/tvDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/age"
-                    android:inputType="numberDecimal"
-                    android:maxLength="3"
-                    app:met_baseColor="@color/m_text_color"
-                    app:met_floatingLabel="highlight"
-                    app:met_helperTextColor="@color/m_text_color"
-                    app:met_errorColor="@color/underline_color"
-                    app:met_maxCharacters="3"
-                    app:met_minCharacters="2"
-                    app:met_primaryColor="@color/m_text_color"
-                    app:met_singleLineEllipsis="true"
-                    app:met_textColor="@color/m_text_color"
-                    app:met_textColorHint="@color/m_text_color" />
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/date"
+                    android:textSize="22sp" />
+
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bck_elements"
                 android:layout_margin="8dp"
+                android:background="@drawable/bck_elements"
                 android:padding="4dp">
+
                 <com.rengwuxian.materialedittext.MaterialEditText
                     android:id="@+id/editTextWeight"
                     android:layout_width="match_parent"
@@ -308,12 +302,12 @@
                     android:inputType="numberDecimal"
                     android:maxLength="3"
                     app:met_baseColor="@color/white"
+                    app:met_errorColor="@color/underline_color"
                     app:met_floatingLabel="highlight"
                     app:met_floatingLabelText="@string/weight"
                     app:met_helperTextColor="@color/m_text_color"
                     app:met_maxCharacters="3"
                     app:met_minCharacters="2"
-                    app:met_errorColor="@color/underline_color"
                     app:met_primaryColor="@color/m_text_color"
                     app:met_singleLineEllipsis="true"
                     app:met_textColor="@color/m_text_color"

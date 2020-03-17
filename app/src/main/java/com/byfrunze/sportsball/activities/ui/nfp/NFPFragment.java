@@ -16,7 +16,6 @@ import com.byfrunze.sportsball.R;
 import com.byfrunze.sportsball.activities.ui.addcalculator.AddCalculatorFragment;
 import com.byfrunze.sportsball.activities.ui.calculator.CalculatorFragment;
 import com.byfrunze.sportsball.activities.ui.calendar.CalendarFragment;
-import com.byfrunze.sportsball.activities.ui.history.HistoryFragment;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.Objects;

@@ -2,7 +2,6 @@ package com.byfrunze.sportsball.activities.ui.feed;
 
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -12,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.byfrunze.sportsball.R;
 import com.byfrunze.sportsball.models.Article;
-import com.byfrunze.sportsball.models.JSONNews;
 import com.google.android.material.card.MaterialCardView;
 import com.squareup.picasso.Picasso;
 

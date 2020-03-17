@@ -135,4 +135,6 @@
     <string name="search">Поиск</string>
     <string name="sport">Спорт</string>
     <string name="show">show</string>
+    <string name="date">Дата рождения</string>
+    <string name="change_date">Сменить</string>
 </resources>

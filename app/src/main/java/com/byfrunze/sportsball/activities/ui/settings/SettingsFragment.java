@@ -1,11 +1,10 @@
 package com.byfrunze.sportsball.activities.ui.settings;
 
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.ColorSpace;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +12,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -24,11 +21,11 @@ import androidx.fragment.app.Fragment;
 import com.byfrunze.sportsball.R;
 import com.byfrunze.sportsball.models.ModelOfPerson;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.rengwuxian.materialedittext.MaterialEditText;
 import com.suke.widget.SwitchButton;
 
+import java.util.Calendar;
 import java.util.Objects;
 
 import butterknife.BindView;
@@ -40,8 +37,6 @@ public class SettingsFragment extends Fragment {
 
     @BindView(R.id.editTextName)
     MaterialEditText editTextName;
-    @BindView(R.id.editTextAge)
-    MaterialEditText editTextAge;
     @BindView(R.id.editTextWeight)
     MaterialEditText editTextWeight;
     @BindView(R.id.spinner_categories)
@@ -82,6 +77,8 @@ public class SettingsFragment extends Fragment {
     private SharedPreferences.Editor editor = null;
     private SharedPreferences saveData;
 
+    @BindView(R.id.tvDate)
+    TextView tvDate;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -137,11 +134,11 @@ public class SettingsFragment extends Fragment {
         }
 
         editTextName.setText(name);
-        editTextAge.setText(age);
+        tvDate.setText(age);
         editTextWeight.setText(weight);
 
         btnSaveSettings.setOnClickListener(v -> {
-            if (editTextName.length() < 2 || editTextAge.length() < 2 || editTextWeight.length() < 2) {
+            if (editTextName.length() < 1 || age.length() < 2 || editTextWeight.length() < 2) {
                 Snackbar.make(root, "Заполните данные", Snackbar.LENGTH_SHORT).setAnimationMode(Snackbar.ANIMATION_MODE_SLIDE).show();
             } else {
                 category = spinnerCategories.getSelectedItemPosition();
@@ -149,13 +146,12 @@ public class SettingsFragment extends Fragment {
 
                 model = mRealm.where(ModelOfPerson.class).findAll().last();
                 Objects.requireNonNull(model).setName(Objects.requireNonNull(editTextName.getText()).toString());
-                model.setAge(Integer.parseInt(Objects.requireNonNull(editTextAge.getText()).toString()));
+                model.setAge(mAge);
                 model.setWeight(Integer.parseInt(Objects.requireNonNull(editTextWeight.getText()).toString()));
 
                 model.setCategory(category);
                 model.setSex_id(sex_id);
                 mRealm.commitTransaction();
-                Log.i("TAG", "onCreateView: " + reSex + sex_id);
 
                 Snackbar.make(root, "Сохранено", Snackbar.LENGTH_SHORT).setAnimationMode(Snackbar.ANIMATION_MODE_SLIDE).setAnchorView(btnSaveSettings).show();
             }
@@ -169,10 +165,49 @@ public class SettingsFragment extends Fragment {
             dialog.show();
         });
 
+        tvDate.setOnClickListener(v -> callDatePicker());
+
 
         return root;
     }
 
+    private int currentYear = 0;
+    private int currentMonth = 0;
+    private int currentDay = 0;
+    private int bdYear = 0;
+    private int bdMonth = 0;
+    private int bdDay = 0;
+    private int mAge = 0;
+
+    private void callDatePicker() {
+        // получаем текущую дату
+        final Calendar cal = Calendar.getInstance();
+        currentYear = cal.get(Calendar.YEAR);
+        currentMonth = cal.get(Calendar.MONTH);
+        currentDay = cal.get(Calendar.DAY_OF_MONTH);
+
+        getContext().setTheme(R.style.AppTheme);
+
+        // инициализируем диалог выбора даты текущими значениями
+        DatePickerDialog datePickerDialog = new DatePickerDialog(context,
+                (view, year, monthOfYear, dayOfMonth) -> {
+                    String editTextDateParam = dayOfMonth + "." + (monthOfYear + 1) + "." + year;
+                    bdYear = year;
+                    bdDay = dayOfMonth;
+                    bdMonth = monthOfYear;
+                    tvDate.setText(editTextDateParam);
+                    if ((currentDay <= bdDay) && (currentMonth <= bdMonth)) {
+                        mAge = currentYear - bdYear - 1;
+                    } else {
+                        mAge = currentYear - bdYear;
+                    }
+
+                },  currentYear,  currentMonth, currentDay);
+
+        datePickerDialog.getDatePicker().setLayoutMode(1);
+        datePickerDialog.show();
+
+    }
 
     private AdapterView.OnItemSelectedListener OnSelectCourse = new AdapterView.OnItemSelectedListener() {
         @Override

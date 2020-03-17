@@ -241,7 +241,6 @@ public class CalculatorFragment extends Fragment {
         weight = Objects.requireNonNull(model.get(model.size() - 1)).getWeight();
         sex_id = Objects.requireNonNull(model.get(model.size() - 1)).getSex_id();
         category = Objects.requireNonNull(model.get(model.size() - 1)).getCategory();
-        Log.i("TAG", "initDB: " + category);
     }
 
     private void setupAllSpinner() {
@@ -865,6 +864,5 @@ public class CalculatorFragment extends Fragment {
                 Integer.parseInt(textViewWSMark.getText().toString()),
                 Integer.parseInt(textViewAgilityMark.getText().toString()));
     }
-
 
 }
