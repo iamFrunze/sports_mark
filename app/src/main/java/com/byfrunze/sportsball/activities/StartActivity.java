@@ -299,6 +299,11 @@ public class StartActivity extends AppCompatActivity {
                     bdYear = year;
                     bdDay = dayOfMonth;
                     bdMonth = monthOfYear;
+                    editor = saveData.edit();
+                    editor.putInt("bDay", bdDay);
+                    editor.putInt("bMonth", bdMonth);
+                    editor.putInt("bYear", bdYear);
+                    editor.apply();
                     tvDate.setText(editTextDateParam);
                     if ((currentDay <= bdDay) && (currentMonth <= bdMonth)) {
                         mAge = currentYear - bdYear - 1;

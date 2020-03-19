@@ -1,5 +1,7 @@
 package com.byfrunze.sportsball.activities.ui.calculator;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,6 +33,7 @@ import com.google.android.material.snackbar.Snackbar;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -123,6 +126,14 @@ public class CalculatorFragment extends Fragment {
     private int weight;
     private int category;
     private View root;
+    private Context context;
+
+    private int currentYear = 0;
+    private int currentMonth = 0;
+    private int currentDay = 0;
+    private int bdYear = 0;
+    private int bdMonth = 0;
+    private int bdDay = 0;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -237,7 +248,13 @@ public class CalculatorFragment extends Fragment {
     private void initDB() {
         RealmResults<ModelOfPerson> model = mRealm.where(ModelOfPerson.class).findAll();
         name = Objects.requireNonNull(model.get(model.size() - 1)).getName();
-        age = Objects.requireNonNull(model.get(model.size() - 1)).getAge();
+
+        if(getAutoAge() != 0){
+            age = getAutoAge();
+        }else{
+            age = Objects.requireNonNull(model.get(model.size() - 1)).getAge();
+        }
+
         weight = Objects.requireNonNull(model.get(model.size() - 1)).getWeight();
         sex_id = Objects.requireNonNull(model.get(model.size() - 1)).getSex_id();
         category = Objects.requireNonNull(model.get(model.size() - 1)).getCategory();
@@ -852,6 +869,27 @@ public class CalculatorFragment extends Fragment {
     }
 
 
+
+    private int getAutoAge() {
+        final Calendar cal = Calendar.getInstance();
+        currentYear = cal.get(Calendar.YEAR);
+        currentMonth = cal.get(Calendar.MONTH);
+        currentDay = cal.get(Calendar.DAY_OF_MONTH);
+
+        SharedPreferences data = context.getSharedPreferences("DateInfo", Context.MODE_PRIVATE);
+        bdDay = data.getInt("bDay", currentDay);
+        bdMonth = data.getInt("bMonth", currentMonth);
+        bdYear = data.getInt("bYear", currentYear);
+
+        if ((currentDay <= bdDay) && (currentMonth <= bdMonth)) {
+            return currentYear - bdYear - 1;
+        } else {
+            return currentYear - bdYear;
+        }
+
+    }
+
+
     public ModelWarriorMark getModel() {
         return new ModelWarriorMark(
                 0,
@@ -865,4 +903,9 @@ public class CalculatorFragment extends Fragment {
                 Integer.parseInt(textViewAgilityMark.getText().toString()));
     }
 
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        this.context = context;
+    }
 }

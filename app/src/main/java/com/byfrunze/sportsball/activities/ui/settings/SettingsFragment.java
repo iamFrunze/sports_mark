@@ -108,7 +108,12 @@ public class SettingsFragment extends Fragment {
         saveData = context.getSharedPreferences("DateInfo", Context.MODE_PRIVATE);
 
         String name = Objects.requireNonNull(mRealm.where(ModelOfPerson.class).findAll().last()).getName();
-        String age = String.valueOf(Objects.requireNonNull(mRealm.where(ModelOfPerson.class).findAll().last()).getAge());
+        String age;
+        if(getAutoAge() != 0){
+            age = String.valueOf(getAutoAge());
+        }else{
+            age = String.valueOf(Objects.requireNonNull(mRealm.where(ModelOfPerson.class).findAll().last()).getAge());
+        }
         String weight = String.valueOf(Objects.requireNonNull(mRealm.where(ModelOfPerson.class).findAll().last()).getWeight());
         int category1 = Objects.requireNonNull(mRealm.where(ModelOfPerson.class).findAll().last()).getCategory();
         reSex = context.getSharedPreferences("DateInfo", Context.MODE_PRIVATE).getInt("reSex", 0);
@@ -191,16 +196,23 @@ public class SettingsFragment extends Fragment {
         // инициализируем диалог выбора даты текущими значениями
         DatePickerDialog datePickerDialog = new DatePickerDialog(context,
                 (view, year, monthOfYear, dayOfMonth) -> {
-                    String editTextDateParam = dayOfMonth + "." + (monthOfYear + 1) + "." + year;
                     bdYear = year;
                     bdDay = dayOfMonth;
                     bdMonth = monthOfYear;
-                    tvDate.setText(editTextDateParam);
+                    editor = saveData.edit();
+                    editor.putInt("bDay", bdDay);
+                    editor.putInt("bMonth", bdMonth);
+                    editor.putInt("bYear", bdYear);
+                    editor.apply();
                     if ((currentDay <= bdDay) && (currentMonth <= bdMonth)) {
                         mAge = currentYear - bdYear - 1;
+                        tvDate.setText(mAge);
+
                     } else {
                         mAge = currentYear - bdYear;
+                        tvDate.setText(mAge);
                     }
+
 
                 },  currentYear,  currentMonth, currentDay);
 
@@ -208,8 +220,25 @@ public class SettingsFragment extends Fragment {
         datePickerDialog.show();
 
     }
+    private int getAutoAge() {
+        final Calendar cal = Calendar.getInstance();
+        currentYear = cal.get(Calendar.YEAR);
+        currentMonth = cal.get(Calendar.MONTH);
+        currentDay = cal.get(Calendar.DAY_OF_MONTH);
 
-    private AdapterView.OnItemSelectedListener OnSelectCourse = new AdapterView.OnItemSelectedListener() {
+        SharedPreferences data = context.getSharedPreferences("DateInfo", Context.MODE_PRIVATE);
+        bdDay = data.getInt("bDay", currentDay);
+        bdMonth = data.getInt("bMonth", currentMonth);
+        bdYear = data.getInt("bYear", currentYear);
+
+        if ((currentDay <= bdDay) && (currentMonth <= bdMonth)) {
+            return currentYear - bdYear - 1;
+        } else {
+            return currentYear - bdYear;
+        }
+    }
+
+        private AdapterView.OnItemSelectedListener OnSelectCourse = new AdapterView.OnItemSelectedListener() {
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
             switch (position) {
