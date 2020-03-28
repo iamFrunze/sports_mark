@@ -206,11 +206,11 @@ public class SettingsFragment extends Fragment {
                     editor.apply();
                     if ((currentDay <= bdDay) && (currentMonth <= bdMonth)) {
                         mAge = currentYear - bdYear - 1;
-                        tvDate.setText(mAge);
+                        tvDate.setText(String.valueOf(mAge));
 
                     } else {
                         mAge = currentYear - bdYear;
-                        tvDate.setText(mAge);
+                        tvDate.setText(String.valueOf(mAge));
                     }
 
 
