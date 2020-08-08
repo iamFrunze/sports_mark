@@ -34,6 +34,7 @@ import io.realm.RealmConfiguration;
 
 public class StartActivity extends AppCompatActivity {
 
+    //sad
     @BindView(R.id.editTextName)
     MaterialEditText editTextName;
     @BindView(R.id.editTextWeight)
